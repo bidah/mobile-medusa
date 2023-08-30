@@ -11,16 +11,16 @@ import { ParsedUrlQuery } from 'querystring'
 import { dehydrate, QueryClient, useQuery } from 'react-query'
 import { NextPageWithLayout, PrefetchedPageProps } from 'types/global'
 import { ScrollView, Text, View } from 'design'
-import { createParam } from 'solito'
-import { Stack } from 'expo-router'
+import { useNavigation, useRouter, useLocalSearchParams } from "expo-router"
 import useProduct from '../../lib/hooks/use-product'
 interface Params extends ParsedUrlQuery {
   handle: string
 }
 
 export const ProductScreen = (props) => {
-  const { useParam } = createParam<Params>()
-  const [handle] = useParam('handle', { initial: '' })
+  const router = useRouter();
+  const params = useLocalSearchParams();
+  const { handle = '' } = params;
 
   const { data, isError, isLoading, isSuccess } = useProduct(handle)
 
@@ -102,3 +102,4 @@ export const ProductScreen = (props) => {
 //     },
 //   }
 // }
+

@@ -2,16 +2,16 @@ import { View, ScrollView, Stack } from 'design'
 import OrderCompletedTemplate from './templates/order-completed-template'
 import { dehydrate, QueryClient, useQuery } from 'react-query'
 import { medusaClient } from 'lib/config'
-import { createParam } from 'solito'
+import { useNavigation, useRouter, useLocalSearchParams } from "expo-router"
 
 const fetchOrder = async (id: string) => {
   return await medusaClient.orders.retrieve(id).then(({ order }) => order)
 }
 
 export function OrderConfirmedScreen() {
-  const { useParam } = createParam<{ id: string }>()
-
-  const [id] = useParam('id', { initial: '' })
+  const router = useRouter();
+  const params = useLocalSearchParams();
+  const { id = '' } = params;
 
   const { isSuccess, data, isLoading, isError } = useQuery(
     ['get_order_confirmed', id],
@@ -36,3 +36,6 @@ export function OrderConfirmedScreen() {
     </ScrollView>
   )
 }
+
+
+
