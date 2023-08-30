@@ -12,6 +12,7 @@
   "dependencies": {
     "@babel/plugin-proposal-export-namespace-from": "^7.18.9",
     "@gorhom/bottom-sheet": "^4.4.7",
+    "@hookform/error-message": "^2.0.1",
     "@medusajs/medusa-js": "^6.0.3",
     "@mobily/stacks": "^2.2.2",
     "@react-native-async-storage/async-storage": "^1.19.3",

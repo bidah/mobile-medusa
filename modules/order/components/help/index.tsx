@@ -1,6 +1,6 @@
 import React from 'react'
 import { View, Pressable, Text } from 'design'
-import { Link } from 'solito/link'
+import { Link } from 'expo-router'
 import {
   textBaseRegular,
   textBaseSemi,

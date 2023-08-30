@@ -11,7 +11,7 @@ import {
   text2xlRegular,
 } from 'design/tailwind/custom-css-classes'
 import { Text, Tiles } from 'design'
-import { Link } from 'solito/link'
+import { Link } from 'expo-router'
 
 const FeaturedProducts = () => {
   const { data } = useFeaturedProductsQuery()
