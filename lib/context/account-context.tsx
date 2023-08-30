@@ -1,7 +1,7 @@
 import { medusaClient } from 'lib/config'
 import { Customer } from '@medusajs/medusa'
 import { useMeCustomer } from 'medusa-react'
-import { useRouter } from 'solito/router'
+import { useRouter } from 'expo-router'
 import React, { createContext, useCallback, useContext, useState } from 'react'
 import { useMutation } from 'react-query'
 
