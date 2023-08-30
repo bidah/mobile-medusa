@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bfc1db00-bde7-4309-8cd5-70f65b589602" name="Changes" comment="migration: change import to absoulte path instead of monorepo app/ path">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="bfc1db00-bde7-4309-8cd5-70f65b589602" name="Changes" comment="migration: solito refactor">
+      <change beforePath="$PROJECT_DIR$/modules/order/order-details-screen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/modules/order/order-details-screen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/products/components/infinite-products/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/modules/products/components/infinite-products/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +61,7 @@
       <updated>1693406053630</updated>
       <workItem from="1693406054895" duration="753000" />
       <workItem from="1693406826715" duration="1601000" />
-      <workItem from="1693408658041" duration="1201000" />
+      <workItem from="1693408658041" duration="1943000" />
     </task>
     <task id="LOCAL-00001" summary="add all files from universal-medusa">
       <created>1693406675117</created>
@@ -88,7 +91,14 @@
       <option name="project" value="LOCAL" />
       <updated>1693407635639</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="migration: solito refactor">
+      <created>1693410266309</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1693410266309</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -112,6 +122,7 @@
     <MESSAGE value="migration: add app dir" />
     <MESSAGE value="migration: absolute path config" />
     <MESSAGE value="migration: change import to absoulte path instead of monorepo app/ path" />
-    <option name="LAST_COMMIT_MESSAGE" value="migration: change import to absoulte path instead of monorepo app/ path" />
+    <MESSAGE value="migration: solito refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="migration: solito refactor" />
   </component>
 </project>

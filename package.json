@@ -13,6 +13,7 @@
     "@babel/plugin-proposal-export-namespace-from": "^7.18.9",
     "@gorhom/bottom-sheet": "^4.4.7",
     "@medusajs/medusa-js": "^6.0.3",
+    "@mobily/stacks": "^2.2.2",
     "@types/react": "~18.2.18",
     "clsx": "^2.0.0",
     "expo": "~49.0.6",

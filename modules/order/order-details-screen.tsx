@@ -2,7 +2,7 @@ import { View, ScrollView, Stack } from 'design'
 import OrderCompletedTemplate from './templates/order-completed-template'
 import { dehydrate, QueryClient, useQuery } from 'react-query'
 import { medusaClient } from 'lib/config'
-import { createParam } from 'solito'
+import { useRouter, useLocalSearchParams } from "expo-router"
 import OrderDetailsTemplate from './templates/order-details-template'
 
 const fetchOrder = async (id: string) => {
@@ -10,9 +10,9 @@ const fetchOrder = async (id: string) => {
 }
 
 export function OrderDetailsScreen() {
-  const { useParam } = createParam<{ id: string }>()
-
-  const [id] = useParam('id', { initial: '' })
+  const router = useRouter();
+  const params = useLocalSearchParams();
+  const { id = '' } = params;
 
   const { isSuccess, data, isLoading, isError } = useQuery(
     ['get_order_details', id],
@@ -37,3 +37,4 @@ export function OrderDetailsScreen() {
     </ScrollView>
   )
 }
+

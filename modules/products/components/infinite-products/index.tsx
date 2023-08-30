@@ -7,15 +7,13 @@ import ProductPreview from 'modules/products/components/product-preview'
 import SkeletonProductPreview from 'modules/skeletons/components/skeleton-product-preview'
 import { useCart } from 'medusa-react'
 import { useEffect, useMemo } from 'react'
-import { useInView } from 'react-intersection-observer'
 import { useInfiniteQuery } from 'react-query'
-import {
-  IOScrollView,
-  InView as NativeInView,
-} from 'react-native-intersection-observer'
+// import {
+//   IOScrollView,
+//   InView as NativeInView,
+// } from 'react-native-intersection-observer'
 
 import { View, Pressable, Text } from 'design'
-import { Platform } from 'react-native'
 
 type InfiniteProductsType = {
   params: StoreGetProductsParams
@@ -24,10 +22,7 @@ type InfiniteProductsType = {
 const InfiniteProducts = ({ params }: InfiniteProductsType) => {
   const { cart } = useCart()
 
-  const { ref, inView } =
-    Platform.OS === 'web'
-      ? useInView()
-      : (() => ({ ref: null, inView: false }))()
+  const { ref, inView } = (() => ({ ref: null, inView: false }))()
 
   const queryParams = useMemo(() => {
     const p: StoreGetProductsParams = {}
@@ -63,7 +58,7 @@ const InfiniteProducts = ({ params }: InfiniteProductsType) => {
   }, [inView, hasNextPage])
 
   return (
-    <IOScrollView>
+    // <IOScrollView>
       <View className="content-container flex-1 px-2">
         <View className="small:grid-cols-3 medium:grid-cols-4 grid flex-1 grid-cols-2 gap-x-4 gap-y-8">
           {previews.map((p) => (
@@ -92,7 +87,7 @@ const InfiniteProducts = ({ params }: InfiniteProductsType) => {
           <Text ref={ref}></Text>
         </View>
       </View>
-    </IOScrollView>
+    // </IOScrollView>
   )
 }
 
