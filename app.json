@@ -15,8 +15,12 @@
     "assetBundlePatterns": [
       "**/*"
     ],
+    "experiments": {
+      "tsconfigPaths": true
+    },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.mobilemedusa"
     },
     "android": {
       "adaptiveIcon": {
