@@ -13,7 +13,7 @@ import {
   BuildingStorefrontIcon as BuildingStorefrontIconOutline,
   UserCircleIcon as UserCircleIconOutline,
 } from 'react-native-heroicons/outline'
-import { View, Text } from 'app/design'
+import { View, Text } from 'design'
 import { useCart } from 'medusa-react'
 import { LogBox } from 'react-native'
 

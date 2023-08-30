@@ -1,4 +1,4 @@
-import { CartScreen } from 'app/modules/cart/screen'
+import { CartScreen } from 'modules/cart/screen'
 import { Stack } from 'expo-router'
 import { useCart } from 'medusa-react'
 

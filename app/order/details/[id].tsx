@@ -1,5 +1,5 @@
 import { Stack } from 'expo-router'
-import { OrderDetailsScreen } from 'app/modules/order/order-details-screen'
+import { OrderDetailsScreen } from 'modules/order/order-details-screen'
 export default function ConfirmedPage() {
   return (
     <>

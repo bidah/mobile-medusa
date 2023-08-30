@@ -1,6 +1,6 @@
-import { ProductScreen } from 'app/modules/products/screen'
+import { ProductScreen } from 'modules/products/screen'
 import { Stack, useLocalSearchParams, useRouter } from 'expo-router'
-import useProduct from 'app/lib/hooks/use-product'
+import useProduct from 'lib/hooks/use-product'
 
 export default function Handle(props) {
   const { handle } = useLocalSearchParams()

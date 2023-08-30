@@ -1,5 +1,5 @@
 import { Stack } from 'expo-router'
-import { Provider } from 'app/provider'
+import { Provider } from 'provider'
 
 export default function Layout() {
   return (

@@ -1,4 +1,4 @@
-import { OrderConfirmedScreen } from 'app/modules/order/order-confirmed-screen'
+import { OrderConfirmedScreen } from 'modules/order/order-confirmed-screen'
 import { Stack } from 'expo-router'
 
 export default function ConfirmedPage() {

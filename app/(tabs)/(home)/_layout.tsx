@@ -1,6 +1,6 @@
 import { Stack } from 'expo-router'
-import Layout from 'app/modules/layout/templates'
-import { Text, View } from 'app/design'
+import Layout from 'modules/layout/templates'
+import { Text, View } from 'design'
 
 const HomeLayout = () => {
   return (
