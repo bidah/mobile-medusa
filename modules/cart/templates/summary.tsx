@@ -2,7 +2,7 @@ import { Cart } from '@medusajs/medusa'
 import Button from 'modules/common/components/button'
 import CartTotals from 'modules/common/components/cart-totals'
 import { Link, Stack } from 'design'
-import { useRouter } from 'solito/router'
+import { useRouter } from 'expo-router'
 
 type SummaryProps = {
   cart: Omit<Cart, 'refundable_amount' | 'refunded_total'>

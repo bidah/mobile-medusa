@@ -4,7 +4,7 @@ import {
   textBaseRegular,
   textXlSemi,
 } from '../../../../design/tailwind/custom-css-classes'
-import { useRouter } from 'solito/router'
+import { useRouter } from 'expo-router'
 
 const SignInPrompt = () => {
   const { push } = useRouter()

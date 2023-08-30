@@ -2,7 +2,7 @@ import { medusaClient } from 'lib/config'
 import { LOGIN_VIEW, useAccount } from 'lib/context/account-context'
 import Button from 'modules/common/components/button'
 import Input from 'modules/common/components/input'
-import { useRouter } from 'solito/router'
+import { useRouter } from 'expo-router'
 import { useState } from 'react'
 import { View, Text, Stack, Pressable, Link } from 'design'
 

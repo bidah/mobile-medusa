@@ -17,7 +17,7 @@ import {
   useSetPaymentSession,
   useUpdateCart,
 } from 'medusa-react'
-import { useRouter } from 'solito/router'
+import { useRouter } from 'expo-router'
 import React, { createContext, useContext, useEffect, useMemo } from 'react'
 import { FormProvider, useForm, useFormContext } from 'react-hook-form'
 import { useStore } from './store-context'

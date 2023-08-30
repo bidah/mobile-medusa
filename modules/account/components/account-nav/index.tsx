@@ -2,7 +2,7 @@ import { useAccount } from 'lib/context/account-context'
 import ChevronDown from 'modules/common/icons/chevron-down'
 import clsx from 'clsx'
 import { View, Text, Pressable, Link } from 'design'
-import { useRouter } from 'solito/router'
+import { useRouter } from 'expo-router'
 import { useUniversalPathname } from 'lib/hooks/use-universal-pathname'
 import {
   textBaseRegular,

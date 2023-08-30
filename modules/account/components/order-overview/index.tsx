@@ -7,7 +7,7 @@ import {
   textBaseRegular,
   textLargeSemi,
 } from '../../../../design/tailwind/custom-css-classes'
-import { useRouter } from 'solito/router'
+import { useRouter } from 'expo-router'
 
 const OrderOverview = () => {
   const router = useRouter()

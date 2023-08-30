@@ -4,7 +4,7 @@ import Thumbnail from 'modules/products/components/thumbnail'
 import { formatAmount } from 'medusa-react'
 import { useMemo } from 'react'
 import { View, Text, Link, Columns } from 'design'
-import { useRouter } from 'solito/router'
+import { useRouter } from 'expo-router'
 import {
   textLargeSemi,
   textSmallRegular,
