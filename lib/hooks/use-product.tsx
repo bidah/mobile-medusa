@@ -1,5 +1,5 @@
 import { medusaClient } from '../config'
-import { useQuery } from 'react-query'
+import { useQuery } from '@tanstack/react-query'
 
 export const fetchProduct = async (handle: string) => {
   return await medusaClient.products

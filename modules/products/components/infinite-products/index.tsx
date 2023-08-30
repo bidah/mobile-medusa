@@ -7,7 +7,7 @@ import ProductPreview from 'modules/products/components/product-preview'
 import SkeletonProductPreview from 'modules/skeletons/components/skeleton-product-preview'
 import { useCart } from 'medusa-react'
 import { useEffect, useMemo } from 'react'
-import { useInfiniteQuery } from 'react-query'
+import { useInfiniteQuery } from '@tanstack/react-query'
 // import {
 //   IOScrollView,
 //   InView as NativeInView,

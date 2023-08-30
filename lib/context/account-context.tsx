@@ -3,7 +3,7 @@ import { Customer } from '@medusajs/medusa'
 import { useMeCustomer } from 'medusa-react'
 import { useRouter } from 'expo-router'
 import React, { createContext, useCallback, useContext, useState } from 'react'
-import { useMutation } from 'react-query'
+import { useMutation } from '@tanstack/react-query'
 
 export enum LOGIN_VIEW {
   SIGN_IN = 'sign-in',
@@ -49,13 +49,13 @@ export const AccountProvider = ({ children }: AccountProviderProps) => {
   const useDeleteSession = useMutation('delete-session', handleDeleteSession)
 
   const handleLogout = () => {
-    useDeleteSession.mutate(undefined, {
-      onSuccess: () => {
-        remove()
-        loginView[1](LOGIN_VIEW.SIGN_IN)
-        router.push('/')
-      },
-    })
+    // useDeleteSession.mutate(undefined, {
+    //   onSuccess: () => {
+    //     remove()
+    //     loginView[1](LOGIN_VIEW.SIGN_IN)
+    //     router.push('/')
+    //   },
+    // })
   }
 
   return (

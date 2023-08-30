@@ -2,7 +2,7 @@ import { medusaClient } from 'lib/config'
 import { getPercentageDiff } from 'lib/util/get-precentage-diff'
 import { Product, ProductCollection, Region } from '@medusajs/medusa'
 import { formatAmount, useCart } from 'medusa-react'
-import { useQuery } from 'react-query'
+import { useQuery } from '@tanstack/react-query'
 import { ProductPreviewType } from 'types/global'
 import { CalculatedVariant } from 'types/medusa'
 

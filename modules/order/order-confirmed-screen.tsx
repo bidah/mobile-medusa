@@ -1,6 +1,6 @@
 import { View, ScrollView, Stack } from 'design'
 import OrderCompletedTemplate from './templates/order-completed-template'
-import { dehydrate, QueryClient, useQuery } from 'react-query'
+import { dehydrate, QueryClient, useQuery } from '@tanstack/react-query'
 import { medusaClient } from 'lib/config'
 import { useNavigation, useRouter, useLocalSearchParams } from "expo-router"
 
