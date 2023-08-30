@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bfc1db00-bde7-4309-8cd5-70f65b589602" name="Changes" comment="migration: solito refactor">
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-    </list>
+    <list default="true" id="bfc1db00-bde7-4309-8cd5-70f65b589602" name="Changes" comment="migration: solito refactor" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -59,7 +56,7 @@
       <updated>1693406053630</updated>
       <workItem from="1693406054895" duration="753000" />
       <workItem from="1693406826715" duration="1601000" />
-      <workItem from="1693408658041" duration="2438000" />
+      <workItem from="1693408658041" duration="2741000" />
     </task>
     <task id="LOCAL-00001" summary="add all files from universal-medusa">
       <created>1693406675117</created>
