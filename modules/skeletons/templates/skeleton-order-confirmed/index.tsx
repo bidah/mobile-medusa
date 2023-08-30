@@ -1,6 +1,6 @@
 import SkeletonOrderConfirmedHeader from 'modules/skeletons/components/skeleton-order-confirmed-header"
-import SkeletonOrderInformation from "app/modules/skeletons/components/skeleton-order-information"
-import SkeletonOrderItems from "app/modules/skeletons/components/skeleton-order-items"
+import SkeletonOrderInformation from "modules/skeletons/components/skeleton-order-information"
+import SkeletonOrderItems from "modules/skeletons/components/skeleton-order-items"
 import { View } from 'design'
 
 const SkeletonOrderConfirmed = () => {

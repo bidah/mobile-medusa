@@ -1,8 +1,8 @@
 import { medusaClient } from 'lib/config'
 import { IS_BROWSER } from 'lib/constants'
-// import { getProductHandles } from "app/lib/util/get-product-handles"
-// import Head from "app/modules/common/components/head"
-// import Layout from "app/modules/layout/templates"
+// import { getProductHandles } from "lib/util/get-product-handles"
+// import Head from "modules/common/components/head"
+// import Layout from "modules/layout/templates"
 import ProductTemplate from 'modules/products/templates'
 import SkeletonProductPage from 'modules/skeletons/templates/skeleton-product-page'
 // import { GetStaticPaths, GetStaticProps } from "next"

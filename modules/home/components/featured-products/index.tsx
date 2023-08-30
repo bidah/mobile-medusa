@@ -1,6 +1,6 @@
 import { useFeaturedProductsQuery } from 'lib/hooks/use-layout-data'
 import UnderlineLink from 'modules/common/components/underline-link'
-// import SkeletonProductPreview from "app/modules/skeletons/components/skeleton-product-preview"
+// import SkeletonProductPreview from "modules/skeletons/components/skeleton-product-preview"
 import { View } from 'design/view'
 import { medusaClient } from 'lib/config'
 import { useEffect } from 'react'
