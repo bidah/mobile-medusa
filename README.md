@@ -17,9 +17,9 @@ Combine Medusa's modules for your commerce backend with the latest Expo features
 
 
 <p style="text-align:center; display: block;">
-<img src="https://github.com/bidah/mobile-medusa/assets/1574028/236443d3-818b-43b0-bc88-b8c4605420e7" width="30%" />
-<img src="https://github.com/bidah/mobile-medusa/assets/1574028/b627d749-7cc9-418e-b904-27c6f5661e5c" width="30%" />
-<img src="https://github.com/bidah/mobile-medusa/assets/1574028/f484cde2-1d8b-4529-bb45-b3e962c9521c" width="30%" />
+<img src="https://github.com/bidah/mobile-medusa/assets/1574028/236443d3-818b-43b0-bc88-b8c4605420e7" width="32%" />
+<img src="https://github.com/bidah/mobile-medusa/assets/1574028/b627d749-7cc9-418e-b904-27c6f5661e5c" width="32%" />
+<img src="https://github.com/bidah/mobile-medusa/assets/1574028/f484cde2-1d8b-4529-bb45-b3e962c9521c" width="32%" />
 </p>
 ### Prerequisites
 
