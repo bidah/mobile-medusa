@@ -161,12 +161,13 @@ const Overview = ({ orders, customer }: OverviewProps) => {
           </View>
         </View>
 
-        <Pressable className={"web:hidden"} onPress={handleLogout}>
-          <View className="mt-5 flex w-[100%] flex-row justify-center border border-gray-200 px-2 py-4">
-            <View className="">
-              <Text>Logout</Text>
-            </View>
-          </View>
+        <Pressable
+          className={
+            "web:hidden mt-3 flex flex-row justify-center border border-gray-200 px-4 py-4 mx-2"
+          }
+          onPress={handleLogout}
+        >
+          <Text>Logout</Text>
         </Pressable>
       </View>
     </>
