@@ -1,26 +1,26 @@
-import { Customer, Order } from '@medusajs/medusa'
-import ChevronDown from 'modules/common/icons/chevron-down'
-import MapPin from 'modules/common/icons/map-pin'
-import Package from 'modules/common/icons/package'
-import User from 'modules/common/icons/user'
-import { useAccount } from 'lib/context/account-context'
-import { formatAmount } from 'medusa-react'
-import { View, Pressable, Text, Link } from 'design'
+import { Customer, Order } from "@medusajs/medusa";
+import ChevronDown from "modules/common/icons/chevron-down";
+import MapPin from "modules/common/icons/map-pin";
+import Package from "modules/common/icons/package";
+import User from "modules/common/icons/user";
+import { useAccount } from "lib/context/account-context";
+import { formatAmount } from "medusa-react";
+import { View, Pressable, Text, Link } from "design";
 import {
   text3xlSemi,
   textBaseRegular,
   textLargeSemi,
   textSmallRegular,
   textXlSemi,
-} from '../../../../design/tailwind/custom-css-classes'
+} from "design/tailwind/custom-css-classes";
 
 type OverviewProps = {
-  orders?: Order[]
-  customer?: Omit<Customer, 'password_hash'>
-}
+  orders?: Order[];
+  customer?: Omit<Customer, "password_hash">;
+};
 
 const Overview = ({ orders, customer }: OverviewProps) => {
-  const { handleLogout } = useAccount()
+  const { handleLogout } = useAccount();
   return (
     <>
       <View>
@@ -67,7 +67,7 @@ const Overview = ({ orders, customer }: OverviewProps) => {
               Hello {customer?.first_name}
             </Text>
             <Text className={`${textSmallRegular} text-gray-700 `}>
-              Signed in as:{' '}
+              Signed in as:{" "}
               <Text className="font-semibold">{customer?.email}</Text>
             </Text>
           </View>
@@ -150,7 +150,7 @@ const Overview = ({ orders, customer }: OverviewProps) => {
                             </View>
                           </Link>
                         </View>
-                      )
+                      );
                     })
                   ) : (
                     <Text>No recent orders</Text>
@@ -161,7 +161,7 @@ const Overview = ({ orders, customer }: OverviewProps) => {
           </View>
         </View>
 
-        <Pressable className={'web:hidden'} onPress={handleLogout}>
+        <Pressable className={"web:hidden"} onPress={handleLogout}>
           <View className="mt-5 flex w-[100%] flex-row justify-center border border-gray-200 px-2 py-4">
             <View className="">
               <Text>Logout</Text>
@@ -170,33 +170,33 @@ const Overview = ({ orders, customer }: OverviewProps) => {
         </Pressable>
       </View>
     </>
-  )
-}
+  );
+};
 
-const getProfileCompletion = (customer?: Omit<Customer, 'password_hash'>) => {
-  let count = 0
+const getProfileCompletion = (customer?: Omit<Customer, "password_hash">) => {
+  let count = 0;
 
   if (!customer) {
-    return 0
+    return 0;
   }
 
   if (customer.email) {
-    count++
+    count++;
   }
 
   if (customer.first_name && customer.last_name) {
-    count++
+    count++;
   }
 
   if (customer.phone) {
-    count++
+    count++;
   }
 
   if (customer.billing_address) {
-    count++
+    count++;
   }
 
-  return (count / 4) * 100
-}
+  return (count / 4) * 100;
+};
 
-export default Overview
+export default Overview;
