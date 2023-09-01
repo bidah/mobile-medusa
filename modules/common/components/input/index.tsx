@@ -63,7 +63,6 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
       if (isSubmitting && isFocused) {
         outerOnBlur()
       }
-      console.log('here')
     }, [formState])
 
     return (
