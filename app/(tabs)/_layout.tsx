@@ -30,6 +30,8 @@ if (__DEV__) {
     '[Reanimated]',
     'cannot be given ref',
     'Each child in a list',
+    'uncontrolled',
+    'redirect'
   ])
 } else {
   LogBox.ignoreAllLogs()

@@ -4,23 +4,34 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bfc1db00-bde7-4309-8cd5-70f65b589602" name="Changes" comment="migration: solito refactor">
+    <list default="true" id="bfc1db00-bde7-4309-8cd5-70f65b589602" name="Changes" comment="milestone: app running 🥳">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/[...unmatched].tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/context/account-context.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/lib/context/account-context.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/hooks/use-layout-data.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/lib/hooks/use-layout-data.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/hooks/use-product.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/lib/hooks/use-product.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/checkout/components/discount-code/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/modules/checkout/components/discount-code/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/order/order-confirmed-screen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/modules/order/order-confirmed-screen.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/order/order-details-screen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/modules/order/order-details-screen.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/products/components/infinite-products/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/modules/products/components/infinite-products/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/products/components/related-products/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/modules/products/components/related-products/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/products/screen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/modules/products/screen.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/medusa/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/provider/medusa/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(tabs)/_layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/_layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/order/confirmed/[id].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/order/confirmed/[id].tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/.xcode.env" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Podfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Podfile.properties.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/mobilemedusaapp.xcodeproj/project.pbxproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/mobilemedusaapp.xcodeproj/xcshareddata/xcschemes/mobilemedusaapp.xcscheme" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/mobilemedusaapp/AppDelegate.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/mobilemedusaapp/AppDelegate.mm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/mobilemedusaapp/Images.xcassets/AppIcon.appiconset/App-Icon-1024x1024@1x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/mobilemedusaapp/Images.xcassets/AppIcon.appiconset/Contents.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/mobilemedusaapp/Images.xcassets/Contents.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/mobilemedusaapp/Images.xcassets/SplashScreen.imageset/Contents.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/mobilemedusaapp/Images.xcassets/SplashScreen.imageset/image.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/mobilemedusaapp/Images.xcassets/SplashScreenBackground.imageset/Contents.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/mobilemedusaapp/Images.xcassets/SplashScreenBackground.imageset/image.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/mobilemedusaapp/Info.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/mobilemedusaapp/SplashScreen.storyboard" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/mobilemedusaapp/Supporting/Expo.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/mobilemedusaapp/main.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/mobilemedusaapp/mobilemedusaapp-Bridging-Header.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/mobilemedusaapp/mobilemedusaapp.entitlements" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/mobilemedusaapp/noop-file.swift" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +85,7 @@
       <workItem from="1693406054895" duration="753000" />
       <workItem from="1693406826715" duration="1601000" />
       <workItem from="1693408658041" duration="3327000" />
-      <workItem from="1693426013683" duration="598000" />
+      <workItem from="1693426013683" duration="2227000" />
     </task>
     <task id="LOCAL-00001" summary="add all files from universal-medusa">
       <created>1693406675117</created>
@@ -111,7 +122,14 @@
       <option name="project" value="LOCAL" />
       <updated>1693410266309</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="milestone: app running 🥳">
+      <created>1693428572908</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1693428572908</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -136,6 +154,7 @@
     <MESSAGE value="migration: absolute path config" />
     <MESSAGE value="migration: change import to absoulte path instead of monorepo app/ path" />
     <MESSAGE value="migration: solito refactor" />
-    <option name="LAST_COMMIT_MESSAGE" value="migration: solito refactor" />
+    <MESSAGE value="milestone: app running " />
+    <option name="LAST_COMMIT_MESSAGE" value="milestone: app running " />
   </component>
 </project>

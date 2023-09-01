@@ -6,6 +6,7 @@ export default function ConfirmedPage() {
         <Stack.Screen
             options={{
                 title: `Order Confirmed`,
+                presentation: 'modal',
             }}
         />
      <OrderConfirmedScreen />
