@@ -1,11 +1,6 @@
-<p align="center">
-  <picture>
-    <img alt="Universal Medusa logo" src="https://github.com/bidah/universal-medusa/assets/1574028/e372d7d6-80bd-4940-a51d-e9c1f5bf4133">
-    </picture>
-</p>
 
 <h1 align="center">
-  Mobile Medusa Expo Starter
+  Mobile Medusa
 </h1>
 
 <p align="center">
