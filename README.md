@@ -4,7 +4,7 @@
 </h1>
 
 <p align="center">
-Combine Medusa's modules for your commerce backend with the latest Expo features for a mobile storefront that matches Medusa Next.js starter functionality and look and feel.</p>
+Combine Medusa's modules for your commerce backend with the latest Expo features for a mobile storefront that matches Medusa Next.js starter functionality, look and feel.</p>
 
 <p align="center">
   <a href="https://discord.gg/xpCwq3Kfn8">
