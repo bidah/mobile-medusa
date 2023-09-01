@@ -31,31 +31,31 @@ const Overview = ({ orders, customer }: OverviewProps) => {
           <View className={`${textBaseRegular} flex `}>
             <View className="flex w-[100%]">
               <Link href="/account/profile" asChild>
-                <View className="flex flex-row items-center justify-between border-b border-gray-200 px-2 py-4">
+                <Pressable className="flex flex-row items-center justify-between border-b border-gray-200 px-2 py-4">
                   <View className="flex flex-row items-center gap-x-2">
                     <User size={16} />
                     <Text>Profile</Text>
                   </View>
                   <ChevronDown className="-rotate-90 transform" />
-                </View>
+                </Pressable>
               </Link>
               <Link href="/account/addresses" asChild>
-                <View className="flex flex-row items-center justify-between border-b border-gray-200 px-2 py-4">
+                <Pressable className="flex flex-row items-center justify-between border-b border-gray-200 px-2 py-4">
                   <View className="flex flex-row items-center gap-x-2">
                     <MapPin size={16} />
                     <Text>Addresses</Text>
                   </View>
                   <ChevronDown className="-rotate-90 transform" />
-                </View>
+                </Pressable>
               </Link>
               <Link href="/account/orders" asChild>
-                <View className="flex flex-row items-center justify-between border-b border-gray-200 px-2 py-4">
+                <Pressable className="flex flex-row items-center justify-between border-b border-gray-200 px-2 py-4">
                   <View className="flex flex-row items-center gap-x-2">
                     <Package size={16} />
                     <Text>Orders</Text>
                   </View>
                   <ChevronDown className="-rotate-90 transform" />
-                </View>
+                </Pressable>
               </Link>
             </View>
           </View>
