@@ -1,18 +1,18 @@
-import Addresses from 'modules/checkout/components/addresses'
-import Payment from 'modules/checkout/components/payment'
-import Shipping from 'modules/checkout/components/shipping'
-import { useCart } from 'medusa-react'
-import { Text, View } from '../../../../design'
+import Addresses from "modules/checkout/components/addresses";
+import Payment from "modules/checkout/components/payment";
+import Shipping from "modules/checkout/components/shipping";
+import { useCart } from "medusa-react";
+import { Text, View } from "../../../../design";
 
 const CheckoutForm = () => {
-  const { cart } = useCart()
+  const { cart } = useCart();
 
   if (!cart?.id) {
-    return null
+    return null;
   }
 
   return (
-    <View className={'px-0'}>
+    <View className={"px-0"}>
       <View className="small: small:gap-y-8 grid w-full grid-cols-1 gap-y-6 ">
         <View>
           <Addresses />
@@ -27,7 +27,7 @@ const CheckoutForm = () => {
         </View>
       </View>
     </View>
-  )
-}
+  );
+};
 
-export default CheckoutForm
+export default CheckoutForm;

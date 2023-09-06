@@ -1,11 +1,11 @@
-import { CheckoutProvider } from 'lib/context/checkout-context'
-import ChevronDown from 'modules/common/icons/chevron-down'
-import MedusaCTA from 'modules/layout/components/medusa-cta'
-import Link from 'next/link'
+import { CheckoutProvider } from "lib/context/checkout-context";
+import ChevronDown from "modules/common/icons/chevron-down";
+import MedusaCTA from "modules/layout/components/medusa-cta";
+import Link from "next/link";
 // import CheckoutLoader from '../components/checkout-loader'
-import CheckoutForm from './checkout-form'
-import CheckoutSummary from './checkout-summary'
-import { ScrollView, View, Text } from 'design'
+import CheckoutForm from "./checkout-form";
+import CheckoutSummary from "./checkout-summary";
+import { ScrollView, View, Text } from "design";
 
 const CheckoutTemplate = () => {
   return (
@@ -42,7 +42,7 @@ const CheckoutTemplate = () => {
         </View>
       </View>
     </CheckoutProvider>
-  )
-}
+  );
+};
 
-export default CheckoutTemplate
+export default CheckoutTemplate;

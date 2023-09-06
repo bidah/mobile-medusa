@@ -1,16 +1,15 @@
-import DiscountCode from 'modules/checkout/components/discount-code'
-import GiftCard from 'modules/checkout/components/gift-card'
-import PaymentButton from 'modules/checkout/components/payment-button'
-import CartTotals from 'modules/common/components/cart-totals'
-import { useCart } from 'medusa-react'
-import {View, Pressable, Text} from 'design'
-
+import DiscountCode from "modules/checkout/components/discount-code";
+import GiftCard from "modules/checkout/components/gift-card";
+import PaymentButton from "modules/checkout/components/payment-button";
+import CartTotals from "modules/common/components/cart-totals";
+import { useCart } from "medusa-react";
+import { View, Pressable, Text } from "design";
 
 const CheckoutSummary = () => {
-  const { cart } = useCart()
+  const { cart } = useCart();
 
   if (!cart?.id) {
-    return null
+    return null;
   }
 
   return (
@@ -19,12 +18,10 @@ const CheckoutSummary = () => {
         <CartTotals cart={cart} />
         <PaymentButton paymentSession={cart?.payment_session} />
       </View>
-      <View className="bg-white p-6">
-        {/*<DiscountCode cart={cart} />*/}
-      </View>
+      <View className="bg-white p-6">{/*<DiscountCode cart={cart} />*/}</View>
       {/*<GiftCard cart={cart} />*/}
     </View>
-  )
-}
+  );
+};
 
-export default CheckoutSummary
+export default CheckoutSummary;

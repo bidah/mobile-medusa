@@ -1,13 +1,13 @@
-import { medusaClient } from 'lib/config'
-import useToggleState, { StateType } from 'lib/hooks/use-toggle-state'
+import { medusaClient } from "lib/config";
+import useToggleState, { StateType } from "lib/hooks/use-toggle-state";
 import {
   Address,
   Cart,
   Customer,
   StorePostCartsCartReq,
-} from '@medusajs/medusa'
-import Wrapper from 'modules/checkout/components/payment-wrapper'
-import { isEqual } from 'lodash'
+} from "@medusajs/medusa";
+import Wrapper from "modules/checkout/components/payment-wrapper";
+import { isEqual } from "lodash";
 import {
   formatAmount,
   useCart,
@@ -16,55 +16,55 @@ import {
   useRegions,
   useSetPaymentSession,
   useUpdateCart,
-} from 'medusa-react'
-import { useRouter } from 'expo-router'
-import React, { createContext, useContext, useEffect, useMemo } from 'react'
-import { FormProvider, useForm, useFormContext } from 'react-hook-form'
-import { useStore } from './store-context'
-import { useNavigation } from 'expo-router'
-import { Platform } from 'react-native'
+} from "medusa-react";
+import { useRouter } from "expo-router";
+import React, { createContext, useContext, useEffect, useMemo } from "react";
+import { FormProvider, useForm, useFormContext } from "react-hook-form";
+import { useStore } from "./store-context";
+import { useNavigation } from "expo-router";
+import { Platform } from "react-native";
 
 type AddressValues = {
-  first_name: string
-  last_name: string
-  company: string
-  address_1: string
-  address_2: string
-  city: string
-  province: string
-  postal_code: string
-  country_code: string
-  phone: string
-}
+  first_name: string;
+  last_name: string;
+  company: string;
+  address_1: string;
+  address_2: string;
+  city: string;
+  province: string;
+  postal_code: string;
+  country_code: string;
+  phone: string;
+};
 
 export type CheckoutFormValues = {
-  shipping_address: AddressValues
-  billing_address: AddressValues
-  email: string
-}
+  shipping_address: AddressValues;
+  billing_address: AddressValues;
+  email: string;
+};
 
 interface CheckoutContext {
-  cart?: Omit<Cart, 'refundable_amount' | 'refunded_total'>
-  shippingMethods: { label: string; value: string; price: string }[]
-  isLoading: boolean
-  readyToComplete: boolean
-  sameAsBilling: StateType
-  editAddresses: StateType
-  initPayment: () => Promise<void>
-  setAddresses: (addresses: CheckoutFormValues) => void
-  setSavedAddress: (address: Address) => void
-  setShippingOption: (soId: string) => void
-  setPaymentSession: (providerId: string) => void
-  onPaymentCompleted: () => void
+  cart?: Omit<Cart, "refundable_amount" | "refunded_total">;
+  shippingMethods: { label: string; value: string; price: string }[];
+  isLoading: boolean;
+  readyToComplete: boolean;
+  sameAsBilling: StateType;
+  editAddresses: StateType;
+  initPayment: () => Promise<void>;
+  setAddresses: (addresses: CheckoutFormValues) => void;
+  setSavedAddress: (address: Address) => void;
+  setShippingOption: (soId: string) => void;
+  setPaymentSession: (providerId: string) => void;
+  onPaymentCompleted: () => void;
 }
 
-const CheckoutContext = createContext<CheckoutContext | null>(null)
+const CheckoutContext = createContext<CheckoutContext | null>(null);
 
 interface CheckoutProviderProps {
-  children?: React.ReactNode
+  children?: React.ReactNode;
 }
 
-const IDEMPOTENCY_KEY = 'create_payment_session_key'
+const IDEMPOTENCY_KEY = "create_payment_session_key";
 
 export const CheckoutProvider = ({ children }: CheckoutProviderProps) => {
   const {
@@ -75,41 +75,41 @@ export const CheckoutProvider = ({ children }: CheckoutProviderProps) => {
       isLoading: addingShippingMethod,
     },
     completeCheckout: { mutate: complete, isLoading: completingCheckout },
-  } = useCart()
+  } = useCart();
 
-  const { customer } = useMeCustomer()
-  const { countryCode } = useStore()
+  const { customer } = useMeCustomer();
+  const { countryCode } = useStore();
 
   const methods = useForm<CheckoutFormValues>({
     defaultValues: mapFormValues(customer, cart, countryCode),
-    reValidateMode: 'onChange',
-  })
+    reValidateMode: "onChange",
+  });
 
   const {
     mutate: setPaymentSessionMutation,
     isLoading: settingPaymentSession,
-  } = useSetPaymentSession(cart?.id!)
+  } = useSetPaymentSession(cart?.id!);
 
   const { mutate: updateCart, isLoading: updatingCart } = useUpdateCart(
     cart?.id!
-  )
+  );
 
   const { shipping_options } = useCartShippingOptions(cart?.id!, {
     enabled: !!cart?.id,
-  })
+  });
 
-  const { regions } = useRegions()
+  const { regions } = useRegions();
 
-  const { resetCart, setRegion } = useStore()
-  const { push, replace } = useRouter()
-  const navigation = useNavigation()
+  const { resetCart, setRegion } = useStore();
+  const { push, replace } = useRouter();
+  const navigation = useNavigation();
 
-  const editAddresses = useToggleState()
+  const editAddresses = useToggleState();
   const sameAsBilling = useToggleState(
     cart?.billing_address && cart?.shipping_address
       ? isEqual(cart.billing_address, cart.shipping_address)
       : true
-  )
+  );
 
   /**
    * Boolean that indicates if a part of the checkout is loading.
@@ -120,13 +120,13 @@ export const CheckoutProvider = ({ children }: CheckoutProviderProps) => {
       settingPaymentSession ||
       updatingCart ||
       completingCheckout
-    )
+    );
   }, [
     addingShippingMethod,
     completingCheckout,
     settingPaymentSession,
     updatingCart,
-  ])
+  ]);
 
   /**
    * Boolean that indicates if the checkout is ready to be completed. A checkout is ready to be completed if
@@ -140,8 +140,8 @@ export const CheckoutProvider = ({ children }: CheckoutProviderProps) => {
       !!cart.billing_address &&
       !!cart.payment_session &&
       cart.shipping_methods?.length > 0
-    )
-  }, [cart])
+    );
+  }, [cart]);
 
   const shippingMethods = useMemo(() => {
     if (shipping_options && cart?.region) {
@@ -152,35 +152,35 @@ export const CheckoutProvider = ({ children }: CheckoutProviderProps) => {
           amount: option.amount || 0,
           region: cart.region,
         }),
-      }))
+      }));
     }
 
-    return []
-  }, [shipping_options, cart])
+    return [];
+  }, [shipping_options, cart]);
 
   /**
    * Resets the form when the cart changed.
    */
   useEffect(() => {
     if (cart?.id) {
-      methods.reset(mapFormValues(customer, cart, countryCode))
+      methods.reset(mapFormValues(customer, cart, countryCode));
     }
-  }, [customer, cart, methods, countryCode])
+  }, [customer, cart, methods, countryCode]);
 
   useEffect(() => {
     if (!cart) {
-      editAddresses.open()
-      return
+      editAddresses.open();
+      return;
     }
 
     if (cart?.shipping_address && cart?.billing_address) {
-      editAddresses.close()
-      return
+      editAddresses.close();
+      return;
     }
 
-    editAddresses.open()
+    editAddresses.open();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [cart])
+  }, [cart]);
 
   /**
    * Method to set the selected shipping method for the cart. This is called when the user selects a shipping method, such as UPS, FedEx, etc.
@@ -192,9 +192,9 @@ export const CheckoutProvider = ({ children }: CheckoutProviderProps) => {
         {
           onSuccess: ({ cart }) => setCart(cart),
         }
-      )
+      );
     }
-  }
+  };
 
   /**
    * Method to create the payment sessions available for the cart. Uses a idempotency key to prevent duplicate requests.
@@ -202,27 +202,27 @@ export const CheckoutProvider = ({ children }: CheckoutProviderProps) => {
   const createPaymentSession = async (cartId: string) => {
     return medusaClient.carts
       .createPaymentSessions(cartId, {
-        'Idempotency-Key': IDEMPOTENCY_KEY,
+        "Idempotency-Key": IDEMPOTENCY_KEY,
       })
       .then(({ cart }) => cart)
-      .catch(() => null)
-  }
+      .catch(() => null);
+  };
 
   /**
    * Method that calls the createPaymentSession method and updates the cart with the payment session.
    */
   const initPayment = async () => {
     if (cart?.id && !cart.payment_sessions?.length && cart?.items?.length) {
-      const paymentSession = await createPaymentSession(cart.id)
+      const paymentSession = await createPaymentSession(cart.id);
 
       if (!paymentSession) {
-        setTimeout(initPayment, 500)
+        setTimeout(initPayment, 500);
       } else {
-        setCart(paymentSession)
-        return
+        setCart(paymentSession);
+        return;
       }
     }
-  }
+  };
 
   /**
    * Method to set the selected payment session for the cart. This is called when the user selects a payment provider, such as Stripe, PayPal, etc.
@@ -235,37 +235,37 @@ export const CheckoutProvider = ({ children }: CheckoutProviderProps) => {
         },
         {
           onSuccess: ({ cart }) => {
-            setCart(cart)
+            setCart(cart);
           },
         }
-      )
+      );
     }
-  }
+  };
 
   const prepareFinalSteps = () => {
-    initPayment()
+    initPayment();
 
     if (shippingMethods) {
-      setShippingOption(shippingMethods[0].value)
+      setShippingOption(shippingMethods[0].value);
     }
-  }
+  };
 
   const setSavedAddress = (address: Address) => {
-    const setValue = methods.setValue
+    const setValue = methods.setValue;
 
-    setValue('shipping_address', {
-      address_1: address.address_1 || '',
-      address_2: address.address_2 || '',
-      city: address.city || '',
-      country_code: address.country_code || '',
-      first_name: address.first_name || '',
-      last_name: address.last_name || '',
-      phone: address.phone || '',
-      postal_code: address.postal_code || '',
-      province: address.province || '',
-      company: address.company || '',
-    })
-  }
+    setValue("shipping_address", {
+      address_1: address.address_1 || "",
+      address_2: address.address_2 || "",
+      city: address.city || "",
+      country_code: address.country_code || "",
+      first_name: address.first_name || "",
+      last_name: address.last_name || "",
+      phone: address.phone || "",
+      postal_code: address.postal_code || "",
+      province: address.province || "",
+      company: address.company || "",
+    });
+  };
 
   /**
    * Method that validates if the cart's region matches the shipping address's region. If not, it will update the cart region.
@@ -274,42 +274,42 @@ export const CheckoutProvider = ({ children }: CheckoutProviderProps) => {
     if (regions && cart) {
       const region = regions.find((r) =>
         r.countries.map((c) => c.iso_2).includes(countryCode)
-      )
+      );
 
       if (region && region.id !== cart.region.id) {
-        setRegion(region.id, countryCode)
+        setRegion(region.id, countryCode);
       }
     }
-  }
+  };
 
   /**
    * Method that sets the addresses and email on the cart.
    */
   const setAddresses = (data: CheckoutFormValues) => {
-    const { shipping_address, billing_address, email } = data
+    const { shipping_address, billing_address, email } = data;
 
     const payload: StorePostCartsCartReq = {
       shipping_address,
       email,
-    }
+    };
 
     if (isEqual(shipping_address, billing_address)) {
-      sameAsBilling.open()
+      sameAsBilling.open();
     }
 
     if (sameAsBilling.state) {
-      payload.billing_address = shipping_address
+      payload.billing_address = shipping_address;
     } else {
-      payload.billing_address = billing_address
+      payload.billing_address = billing_address;
     }
 
     updateCart(payload, {
       onSuccess: ({ cart }) => {
-        setCart(cart)
-        prepareFinalSteps()
+        setCart(cart);
+        prepareFinalSteps();
       },
-    })
-  }
+    });
+  };
 
   /**
    * Method to complete the checkout process. This is called when the user clicks the "Complete Checkout" button.
@@ -317,12 +317,11 @@ export const CheckoutProvider = ({ children }: CheckoutProviderProps) => {
   const onPaymentCompleted = () => {
     complete(undefined, {
       onSuccess: ({ data }) => {
-        resetCart()
-        navigation.popToTop()
-        replace(`/order/confirmed/${data.id}`)
+        resetCart();
+        replace(`/order/confirmed/${data.id}`);
       },
-    })
-  }
+    });
+  };
 
   return (
     <FormProvider {...methods}>
@@ -345,19 +344,19 @@ export const CheckoutProvider = ({ children }: CheckoutProviderProps) => {
         <Wrapper paymentSession={cart?.payment_session}>{children}</Wrapper>
       </CheckoutContext.Provider>
     </FormProvider>
-  )
-}
+  );
+};
 
 export const useCheckout = () => {
-  const context = useContext(CheckoutContext)
-  const form = useFormContext<CheckoutFormValues>()
+  const context = useContext(CheckoutContext);
+  const form = useFormContext<CheckoutFormValues>();
   if (context === null) {
     throw new Error(
-      'useProductActionContext must be used within a ProductActionProvider'
-    )
+      "useProductActionContext must be used within a ProductActionProvider"
+    );
   }
-  return { ...context, ...form }
-}
+  return { ...context, ...form };
+};
 
 /**
  * Method to map the fields of a potential customer and the cart to the checkout form values. Information is assigned with the following priority:
@@ -366,87 +365,87 @@ export const useCheckout = () => {
  * 3. Default values - null
  */
 const mapFormValues = (
-  customer?: Omit<Customer, 'password_hash'>,
-  cart?: Omit<Cart, 'refundable_amount' | 'refunded_total'>,
+  customer?: Omit<Customer, "password_hash">,
+  cart?: Omit<Cart, "refundable_amount" | "refunded_total">,
   currentCountry?: string
 ): CheckoutFormValues => {
-  const customerShippingAddress = customer?.shipping_addresses?.[0]
-  const customerBillingAddress = customer?.billing_address
+  const customerShippingAddress = customer?.shipping_addresses?.[0];
+  const customerBillingAddress = customer?.billing_address;
 
   return {
     shipping_address: {
       first_name:
         cart?.shipping_address?.first_name ||
         customerShippingAddress?.first_name ||
-        '',
+        "",
       last_name:
         cart?.shipping_address?.last_name ||
         customerShippingAddress?.last_name ||
-        '',
+        "",
       address_1:
         cart?.shipping_address?.address_1 ||
         customerShippingAddress?.address_1 ||
-        '',
+        "",
       address_2:
         cart?.shipping_address?.address_2 ||
         customerShippingAddress?.address_2 ||
-        '',
-      city: cart?.shipping_address?.city || customerShippingAddress?.city || '',
+        "",
+      city: cart?.shipping_address?.city || customerShippingAddress?.city || "",
       country_code:
         currentCountry ||
         cart?.shipping_address?.country_code ||
         customerShippingAddress?.country_code ||
-        '',
+        "",
       province:
         cart?.shipping_address?.province ||
         customerShippingAddress?.province ||
-        '',
+        "",
       company:
         cart?.shipping_address?.company ||
         customerShippingAddress?.company ||
-        '',
+        "",
       postal_code:
         cart?.shipping_address?.postal_code ||
         customerShippingAddress?.postal_code ||
-        '',
+        "",
       phone:
-        cart?.shipping_address?.phone || customerShippingAddress?.phone || '',
+        cart?.shipping_address?.phone || customerShippingAddress?.phone || "",
     },
     billing_address: {
       first_name:
         cart?.billing_address?.first_name ||
         customerBillingAddress?.first_name ||
-        '',
+        "",
       last_name:
         cart?.billing_address?.last_name ||
         customerBillingAddress?.last_name ||
-        '',
+        "",
       address_1:
         cart?.billing_address?.address_1 ||
         customerBillingAddress?.address_1 ||
-        '',
+        "",
       address_2:
         cart?.billing_address?.address_2 ||
         customerBillingAddress?.address_2 ||
-        '',
-      city: cart?.billing_address?.city || customerBillingAddress?.city || '',
+        "",
+      city: cart?.billing_address?.city || customerBillingAddress?.city || "",
       country_code:
         cart?.shipping_address?.country_code ||
         customerBillingAddress?.country_code ||
-        '',
+        "",
       province:
         cart?.shipping_address?.province ||
         customerBillingAddress?.province ||
-        '',
+        "",
       company:
-        cart?.billing_address?.company || customerBillingAddress?.company || '',
+        cart?.billing_address?.company || customerBillingAddress?.company || "",
       postal_code:
         cart?.billing_address?.postal_code ||
         customerBillingAddress?.postal_code ||
-        '',
+        "",
       phone:
-        cart?.billing_address?.phone || customerBillingAddress?.phone || '',
+        cart?.billing_address?.phone || customerBillingAddress?.phone || "",
     },
-    email: cart?.email || customer?.email || '',
-  }
-}
+    email: cart?.email || customer?.email || "",
+  };
+};
