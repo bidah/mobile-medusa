@@ -1,9 +1,9 @@
-import useToggleState from 'lib/hooks/use-toggle-state'
-import Button from 'modules/common/components/button'
+import useToggleState from '@/lib/hooks/use-toggle-state'
+import Button from '@/modules/common/components/button'
 import clsx from 'clsx'
 import { useEffect } from 'react'
 import { View, Text } from 'design'
-import { textSmallRegular } from 'design/tailwind/custom-css-classes'
+import { textSmallRegular } from '@/design/tailwind/custom-css-classes'
 type AccountInfoProps = {
   handleSubmit: () => void
   label: string

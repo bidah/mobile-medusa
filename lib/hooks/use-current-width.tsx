@@ -1,4 +1,4 @@
-import { IS_BROWSER } from 'lib/constants'
+import { IS_BROWSER } from '@/lib/constants'
 import { useEffect, useState } from 'react'
 
 const getWidth = () => {

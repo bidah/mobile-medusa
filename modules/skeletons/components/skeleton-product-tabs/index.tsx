@@ -1,4 +1,4 @@
-import repeat from 'lib/util/repeat'
+import repeat from '@/lib/util/repeat'
 import { View } from 'design'
 
 const SkeletonProductTabs = () => {

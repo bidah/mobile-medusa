@@ -1,4 +1,4 @@
-import OrderCompletedTemplate from 'modules/order/templates/order-completed-template'
+import OrderCompletedTemplate from '@/modules/order/templates/order-completed-template'
 import { useOrder } from 'medusa-react'
 import { useRouter } from 'next/router'
 import { Text } from '../../../design'

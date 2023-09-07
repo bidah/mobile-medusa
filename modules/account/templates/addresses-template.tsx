@@ -1,10 +1,10 @@
-import { useAccount } from 'lib/context/account-context'
+import { useAccount } from '@/lib/context/account-context'
 import AddressBook from '../components/address-book'
 import { View, Pressable, Text } from 'design'
 import {
   text2xlSemi,
   textBaseRegular,
-} from 'design/tailwind/custom-css-classes'
+} from '@/design/tailwind/custom-css-classes'
 
 const AddressesTemplate = () => {
   const { customer, retrievingCustomer } = useAccount()

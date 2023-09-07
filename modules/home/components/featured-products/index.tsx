@@ -1,15 +1,15 @@
-import { useFeaturedProductsQuery } from 'lib/hooks/use-layout-data'
-import UnderlineLink from 'modules/common/components/underline-link'
+import { useFeaturedProductsQuery } from '@/lib/hooks/use-layout-data'
+import UnderlineLink from '@/modules/common/components/underline-link'
 // import SkeletonProductPreview from "modules/skeletons/components/skeleton-product-preview"
-import { View } from 'design/view'
-import { medusaClient } from 'lib/config'
+import { View } from '@/design/view'
+import { medusaClient } from '@/lib/config'
 import { useEffect } from 'react'
-import ProductPreview from 'modules/products/components/product-preview'
+import ProductPreview from '@/modules/products/components/product-preview'
 import clsx from 'clsx'
 import {
   contentContainer,
   text2xlRegular,
-} from 'design/tailwind/custom-css-classes'
+} from '@/design/tailwind/custom-css-classes'
 import { Text, Tiles } from 'design'
 import { Link } from 'expo-router'
 

@@ -1,4 +1,4 @@
-import { onlyUnique } from 'lib/util/only-unique'
+import { onlyUnique } from '@/lib/util/only-unique'
 import { ProductOption } from '@medusajs/medusa'
 import clsx from 'clsx'
 import React from 'react'

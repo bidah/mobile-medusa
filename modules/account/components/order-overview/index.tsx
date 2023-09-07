@@ -1,5 +1,5 @@
-import Button from 'modules/common/components/button'
-import Spinner from 'modules/common/icons/spinner'
+import Button from '@/modules/common/components/button'
+import Spinner from '@/modules/common/icons/spinner'
 import { useCustomerOrders } from 'medusa-react'
 import OrderCard from '../order-card'
 import { Text, View, Link } from 'design'

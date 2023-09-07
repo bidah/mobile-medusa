@@ -1,6 +1,6 @@
 import { Listbox, Transition } from '@headlessui/react'
-import { useStore } from 'lib/context/store-context'
-import useToggleState from 'lib/hooks/use-toggle-state'
+import { useStore } from '@/lib/context/store-context'
+import useToggleState from '@/lib/hooks/use-toggle-state'
 import { useRegions } from 'medusa-react'
 import { Fragment, useEffect, useMemo, useState } from 'react'
 import ReactCountryFlag from 'react-country-flag'

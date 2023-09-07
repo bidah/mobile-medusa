@@ -1,6 +1,6 @@
 // import { Image as MedusaImage } from '@medusajs/medusa'
 
-// import PlaceholderImage from 'modules/common/icons/placeholder-image'
+// import PlaceholderImage from '@/modules/common/icons/placeholder-image'
 import clsx from 'clsx'
 import React from 'react'
 import { View, Image, Text } from 'design'

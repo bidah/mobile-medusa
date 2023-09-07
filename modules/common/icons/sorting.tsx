@@ -1,6 +1,6 @@
 import React from 'react'
 import { Svg, Path, Circle } from 'design'
-import { IconProps } from 'types/icon'
+import { IconProps } from '@/types/icon'
 
 type SortingIconProps = {
   ascendingColor?: string

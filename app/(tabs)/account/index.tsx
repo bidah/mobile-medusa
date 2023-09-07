@@ -1,4 +1,4 @@
-import { AccountScreen } from 'modules/account/account-screen'
+import { AccountScreen } from '@/modules/account/account-screen'
 import AccountLayout from "modules/account/templates/account-layout";
 
 export default function AccountPage() {

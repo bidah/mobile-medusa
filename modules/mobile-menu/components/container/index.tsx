@@ -1,5 +1,5 @@
 import { Dialog, Transition } from '@headlessui/react'
-import { useMobileMenu } from 'lib/context/mobile-menu-context'
+import { useMobileMenu } from '@/lib/context/mobile-menu-context'
 import { Fragment } from 'react'
 
 type ContainerProps = {

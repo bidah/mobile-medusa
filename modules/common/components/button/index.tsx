@@ -1,8 +1,8 @@
-import Spinner from 'modules/common/icons/spinner'
+import Spinner from '@/modules/common/icons/spinner'
 import clsx from 'clsx'
 import React from 'react'
 import { Text, View, Pressable } from 'design'
-import { textSmallRegular } from 'design/tailwind/custom-css-classes'
+import { textSmallRegular } from '@/design/tailwind/custom-css-classes'
 import { GestureResponderEvent } from 'react-native'
 
 type ButtonProps = {

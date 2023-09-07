@@ -1,4 +1,4 @@
-import { medusaClient } from 'lib/config'
+import { medusaClient } from '@/lib/config'
 import { Product, StoreGetProductsParams } from '@medusajs/medusa'
 
 const COL_LIMIT = 15

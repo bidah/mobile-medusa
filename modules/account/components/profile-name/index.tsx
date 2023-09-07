@@ -1,6 +1,6 @@
-import { useAccount } from 'lib/context/account-context'
+import { useAccount } from '@/lib/context/account-context'
 import { Customer } from '@medusajs/medusa'
-import Input from 'modules/common/components/input'
+import Input from '@/modules/common/components/input'
 import { useUpdateMe } from 'medusa-react'
 import React, { useEffect } from 'react'
 import { View, Text, Columns } from 'design'

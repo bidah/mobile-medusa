@@ -1,7 +1,7 @@
 import { Dialog, Transition } from '@headlessui/react'
-import { useCheckout } from 'lib/context/checkout-context'
-import noop from 'lib/util/noop'
-import Spinner from 'modules/common/icons/spinner'
+import { useCheckout } from '@/lib/context/checkout-context'
+import noop from '@/lib/util/noop'
+import Spinner from '@/modules/common/icons/spinner'
 
 const CheckoutLoader = () => {
   const { isLoading } = useCheckout()

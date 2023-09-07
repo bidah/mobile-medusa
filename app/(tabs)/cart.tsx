@@ -1,4 +1,4 @@
-import { CartScreen } from 'modules/cart/screen'
+import { CartScreen } from '@/modules/cart/screen'
 
 export default function CartPage() {
   return <CartScreen />

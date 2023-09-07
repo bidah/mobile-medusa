@@ -1,6 +1,6 @@
-import repeat from 'lib/util/repeat'
-import SkeletonButton from 'modules/skeletons/components/skeleton-button'
-import SkeletonProductTabs from 'modules/skeletons/components/skeleton-product-tabs'
+import repeat from '@/lib/util/repeat'
+import SkeletonButton from '@/modules/skeletons/components/skeleton-button'
+import SkeletonProductTabs from '@/modules/skeletons/components/skeleton-product-tabs'
 import { View } from 'design'
 
 const SkeletonProductPage = () => {

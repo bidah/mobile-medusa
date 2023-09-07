@@ -1,6 +1,6 @@
-import ProductActions from 'modules/products/components/product-actions'
+import ProductActions from '@/modules/products/components/product-actions'
 import React from 'react'
-import { Product } from 'types/medusa'
+import { Product } from '@/types/medusa'
 import { View } from 'design'
 
 type ProductInfoProps = {

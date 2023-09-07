@@ -1,4 +1,4 @@
-import Overview from 'modules/account/components/overview'
+import Overview from '@/modules/account/components/overview'
 import { useCustomerOrders, useMeCustomer } from 'medusa-react'
 
 const OverviewTemplate = () => {

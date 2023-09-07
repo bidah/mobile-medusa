@@ -1,6 +1,6 @@
-import { useAccount } from 'lib/context/account-context'
-import UnderlineLink from 'modules/common/components/underline-link'
-import Spinner from 'modules/common/icons/spinner'
+import { useAccount } from '@/lib/context/account-context'
+import UnderlineLink from '@/modules/common/components/underline-link'
+import Spinner from '@/modules/common/icons/spinner'
 import React, { useEffect } from 'react'
 import { View, Text } from 'design'
 

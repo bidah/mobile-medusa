@@ -1,16 +1,16 @@
-import { useMobileMenu } from 'lib/context/mobile-menu-context'
-import Hamburger from 'modules/common/components/hamburger'
-// import CartDropdown from 'modules/layout/components/cart-dropdown'
-import DropdownMenu from 'modules/layout/components/dropdown-menu'
-import MobileMenu from 'modules/mobile-menu/templates'
-// import DesktopSearchModal from 'modules/search/templates/desktop-search-modal'
+import { useMobileMenu } from '@/lib/context/mobile-menu-context'
+import Hamburger from '@/modules/common/components/hamburger'
+// import CartDropdown from '@/modules/layout/components/cart-dropdown'
+import DropdownMenu from '@/modules/layout/components/dropdown-menu'
+import MobileMenu from '@/modules/mobile-menu/templates'
+// import DesktopSearchModal from '@/modules/search/templates/desktop-search-modal'
 import clsx from 'clsx'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 import CartDropdown from '../../components/cart-dropdown'
 import { Link as SSLink } from 'design'
-import { textXlSemi } from 'design/tailwind/custom-css-classes'
+import { textXlSemi } from '@/design/tailwind/custom-css-classes'
 
 const Nav = () => {
   const { pathname } = useRouter()

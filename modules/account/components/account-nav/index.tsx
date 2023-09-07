@@ -1,13 +1,13 @@
-import { useAccount } from 'lib/context/account-context'
-import ChevronDown from 'modules/common/icons/chevron-down'
+import { useAccount } from '@/lib/context/account-context'
+import ChevronDown from '@/modules/common/icons/chevron-down'
 import clsx from 'clsx'
 import { View, Text, Pressable, Link } from 'design'
 import { useRouter } from 'expo-router'
-import { useUniversalPathname } from 'lib/hooks/use-universal-pathname'
+import { useUniversalPathname } from '@/lib/hooks/use-universal-pathname'
 import {
   textBaseRegular,
   textBaseSemi,
-} from 'design/tailwind/custom-css-classes'
+} from '@/design/tailwind/custom-css-classes'
 const AccountNav = () => {
   const route = useUniversalPathname()
   const { handleLogout } = useAccount()

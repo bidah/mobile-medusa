@@ -1,4 +1,4 @@
-import { CheckoutScreen } from 'modules/checkout/screen'
+import { CheckoutScreen } from '@/modules/checkout/screen'
 import { Stack } from 'expo-router'
 
 import { BottomSheetModalProvider } from '@gorhom/bottom-sheet'

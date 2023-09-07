@@ -1,4 +1,4 @@
-import SkeletonCartTotals from 'modules/skeletons/components/skeleton-cart-totals'
+import SkeletonCartTotals from '@/modules/skeletons/components/skeleton-cart-totals'
 import { View } from 'design'
 
 const SkeletonOrderInformation = () => {

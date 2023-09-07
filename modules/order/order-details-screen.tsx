@@ -1,7 +1,7 @@
 import { View, ScrollView, Stack } from 'design'
 import OrderCompletedTemplate from './templates/order-completed-template'
 import { dehydrate, QueryClient, useQuery } from '@tanstack/react-query'
-import { medusaClient } from 'lib/config'
+import { medusaClient } from '@/lib/config'
 import { useRouter, useLocalSearchParams } from "expo-router"
 import OrderDetailsTemplate from './templates/order-details-template'
 

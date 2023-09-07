@@ -1,6 +1,6 @@
-import { medusaClient } from 'lib/config'
+import { medusaClient } from '@/lib/config'
 import { Customer } from '@medusajs/medusa'
-import Input from 'modules/common/components/input'
+import Input from '@/modules/common/components/input'
 import { useUpdateMe } from 'medusa-react'
 import React, { useEffect } from 'react'
 import { View, Text } from 'design'

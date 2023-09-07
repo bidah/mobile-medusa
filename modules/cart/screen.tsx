@@ -1,4 +1,4 @@
-import CartTemplate from 'modules/cart/templates'
+import CartTemplate from '@/modules/cart/templates'
 import { ScrollView, View, Text } from 'design'
 
 export const CartScreen = () => {

@@ -1,6 +1,6 @@
 import { Order } from '@medusajs/medusa'
-import Button from 'modules/common/components/button'
-import Thumbnail from 'modules/products/components/thumbnail'
+import Button from '@/modules/common/components/button'
+import Thumbnail from '@/modules/products/components/thumbnail'
 import { formatAmount } from 'medusa-react'
 import { useMemo } from 'react'
 import { View, Text, Link, Columns } from 'design'
@@ -8,7 +8,7 @@ import { useRouter } from 'expo-router'
 import {
   textLargeSemi,
   textSmallRegular,
-} from 'design/tailwind/custom-css-classes'
+} from '@/design/tailwind/custom-css-classes'
 
 type OrderCardProps = {
   order: Omit<Order, 'beforeInsert'>

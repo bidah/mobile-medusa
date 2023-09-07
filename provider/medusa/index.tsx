@@ -1,5 +1,5 @@
 import React from 'react'
-import { MEDUSA_BACKEND_URL, queryClient } from 'lib/config'
+import { MEDUSA_BACKEND_URL, queryClient } from '@/lib/config'
 import { MedusaProvider, CartProvider } from 'medusa-react'
 import { ReactQueryDevtools } from 'react-query/devtools'
 import { Platform } from 'react-native'

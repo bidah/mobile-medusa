@@ -1,4 +1,4 @@
-import UnderlineLink from 'modules/common/components/underline-link'
+import UnderlineLink from '@/modules/common/components/underline-link'
 import { View, Image, Text } from 'design'
 import { text2xlSemi } from '../../../../design/tailwind/custom-css-classes'
 

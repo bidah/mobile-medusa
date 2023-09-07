@@ -1,5 +1,5 @@
 import { ErrorMessage } from '@hookform/error-message'
-import ChevronDown from 'modules/common/icons/chevron-down'
+import ChevronDown from '@/modules/common/icons/chevron-down'
 import clsx from 'clsx'
 import {
   forwardRef,

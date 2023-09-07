@@ -1,9 +1,9 @@
-import { useProductActions } from 'lib/context/product-context'
-import useProductPrice from 'lib/hooks/use-product-price'
-import OptionSelect from 'modules/products/components/option-select'
+import { useProductActions } from '@/lib/context/product-context'
+import useProductPrice from '@/lib/hooks/use-product-price'
+import OptionSelect from '@/modules/products/components/option-select'
 import clsx from 'clsx'
 import React, { useMemo } from 'react'
-import { Product } from 'types/medusa'
+import { Product } from '@/types/medusa'
 import { View, Link, Text } from 'design'
 import Button from '../../../common/components/button'
 import {
@@ -11,7 +11,7 @@ import {
   textSmallRegular,
   textXlRegular,
   textXlSemi,
-} from 'design/tailwind/custom-css-classes'
+} from '@/design/tailwind/custom-css-classes'
 
 type ProductActionsProps = {
   product: Product

@@ -1,8 +1,8 @@
-import { useMobileMenu } from 'lib/context/mobile-menu-context'
-import { useStore } from 'lib/context/store-context'
-import useCountryOptions from 'lib/hooks/use-country-options'
-import ChevronDown from 'modules/common/icons/chevron-down'
-import X from 'modules/common/icons/x'
+import { useMobileMenu } from '@/lib/context/mobile-menu-context'
+import { useStore } from '@/lib/context/store-context'
+import useCountryOptions from '@/lib/hooks/use-country-options'
+import ChevronDown from '@/modules/common/icons/chevron-down'
+import X from '@/modules/common/icons/x'
 import ReactCountryFlag from 'react-country-flag'
 
 const CountryMenu = () => {
