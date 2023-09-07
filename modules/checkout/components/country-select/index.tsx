@@ -5,6 +5,7 @@ import { useRegions } from 'medusa-react'
 import { Fragment, useEffect, useMemo, useState } from 'react'
 import { ActionSheetIOS } from 'react-native'
 import clsx from 'clsx'
+// import { ChevronDown } from 'react-native-heroicons/solid'
 
 type CountryOption = {
   country: string
@@ -74,17 +75,7 @@ const CountrySelect = () => {
         userInterfaceStyle: 'light',
       },
       (buttonIndex) => {
-        if (buttonIndex === 1) {
-          // setFixedAspectRatiofromAtom({ aspectRatio: 1, name: '2" x 2"' });
-        } else if (buttonIndex === 2) {
-          // setFixedAspectRatiofromAtom({ aspectRatio: 3 / 4, name: '3" x 4"' });
-        } else if (buttonIndex === 3) {
-          // setFixedAspectRatiofromAtom({ aspectRatio: 1, name: '4" x 4"' });
-        } else if (buttonIndex === 4) {
-          // setFixedAspectRatiofromAtom({ aspectRatio: 4 / 6, name: '4" x 6"' });
-        } else if (buttonIndex === 5) {
-          // setFixedAspectRatiofromAtom({ aspectRatio: 5 / 6, name: '5" x 6"' });
-        }
+        handleChange(options[buttonIndex])
       },
     )
 
@@ -96,9 +87,12 @@ const CountrySelect = () => {
       )}
     >
       <Text className={'absolute left-4 top-1 text-xs text-gray-500'}>
-        {'Country'}{' '}
+        {'Country'}
       </Text>
-      <Text>{'country'} </Text>
+      <Text className={'absolute right-4 top-[6px] text-lg text-gray-500'}>
+        {'⌄'}
+      </Text>
+      <Text>{current?.label ?? ''} </Text>
     </Pressable>
   )
 }
