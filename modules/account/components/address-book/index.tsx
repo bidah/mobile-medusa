@@ -1,6 +1,6 @@
 import { Customer } from '@medusajs/medusa'
 import React from 'react'
-import { View, Text } from 'design'
+import { View, Text } from '@/design'
 
 import AddAddress from '../address-card/add-address'
 import EditAddress from '../address-card/edit-address-modal'

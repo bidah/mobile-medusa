@@ -1,5 +1,5 @@
 import { Payment, PaymentStatus } from '@medusajs/medusa'
-import { View, Text } from 'design'
+import { View, Text } from '@/design'
 import { textBaseSemi } from '../../../../design/tailwind/custom-css-classes'
 
 type PaymentDetailsProps = {

@@ -10,7 +10,7 @@ import { ParsedUrlQuery } from 'querystring'
 // import { ReactElement } from "react"
 import { dehydrate, QueryClient, useQuery } from '@tanstack/react-query'
 import { NextPageWithLayout, PrefetchedPageProps } from '@/types/global'
-import { ScrollView, Text, View } from 'design'
+import { ScrollView, Text, View } from '@/design'
 import { useNavigation, useRouter, useLocalSearchParams } from "expo-router"
 import useProduct from '../../lib/hooks/use-product'
 interface Params extends ParsedUrlQuery {

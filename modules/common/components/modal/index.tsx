@@ -3,7 +3,7 @@ import { ModalProvider, useModal } from '@/lib/context/modal-context'
 import X from '@/modules/common/icons/x'
 import clsx from 'clsx'
 import React, { Fragment } from 'react'
-import { Columns, View } from 'design'
+import { Columns, View } from '@/design'
 
 type ModalProps = {
   isOpen: boolean

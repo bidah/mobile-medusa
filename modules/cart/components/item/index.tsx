@@ -6,7 +6,7 @@ import NativeSelect from '@/modules/common/components/native-select'
 import Trash from '@/modules/common/icons/trash'
 import Thumbnail from '@/modules/products/components/thumbnail'
 import { CalculatedVariant } from '@/types/medusa'
-import { View, Text, Pressable, Columns } from 'design'
+import { View, Text, Pressable, Columns } from '@/design'
 import {
   textBaseRegular,
   textSmallRegular,

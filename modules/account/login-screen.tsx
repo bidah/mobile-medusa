@@ -1,4 +1,4 @@
-import { ScrollView, View, Text } from 'design'
+import { ScrollView, View, Text } from '@/design'
 import LoginTemplate from './templates/login-template'
 
 export const LoginScreen = () => {

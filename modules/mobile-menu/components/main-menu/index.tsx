@@ -6,7 +6,7 @@ import Search from '@/modules/common/icons/search'
 import X from '@/modules/common/icons/x'
 import { useCollections, useMeCustomer } from 'medusa-react'
 import ReactCountryFlag from 'react-country-flag'
-import { Link } from 'design'
+import { Link } from '@/design'
 
 const MainMenu = () => {
   const { collections } = useCollections()

@@ -2,7 +2,7 @@ import { StoreGetProductsParams } from '@medusajs/medusa'
 import { useCollections } from 'medusa-react'
 import { ChangeEvent } from 'react'
 import Checkbox from '../../../common/components/checkbox'
-import { View, Pressable, Text } from 'design'
+import { View, Pressable, Text } from '@/design'
 import {
   textBaseRegular,
   textBaseSemi,

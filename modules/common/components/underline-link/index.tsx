@@ -1,5 +1,5 @@
 import ArrowRight from '@/modules/common/icons/arrow-right'
-import { Link, View, Text } from 'design'
+import { Link, View, Text } from '@/design'
 import clsx from 'clsx'
 import { textLargeRegular } from '../../../../design/tailwind/custom-css-classes'
 

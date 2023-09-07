@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { StoreGetProductsParams } from '@medusajs/medusa'
-import { View, Pressable, Text, ScrollView } from 'design'
+import { View, Pressable, Text, ScrollView } from '@/design'
 import RefinementList from './components/refinement-list'
 import InfiniteProducts from '../products/components/infinite-products'
 

@@ -1,6 +1,6 @@
 import clsx from 'clsx'
 import React from 'react'
-import { Pressable, Text, View } from 'design'
+import { Pressable, Text, View } from '@/design'
 
 type HamburgerProps = {
   setOpen: () => void

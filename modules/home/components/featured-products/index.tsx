@@ -10,7 +10,7 @@ import {
   contentContainer,
   text2xlRegular,
 } from '@/design/tailwind/custom-css-classes'
-import { Text, Tiles } from 'design'
+import { Text, Tiles } from '@/design'
 import { Link } from 'expo-router'
 
 const FeaturedProducts = () => {

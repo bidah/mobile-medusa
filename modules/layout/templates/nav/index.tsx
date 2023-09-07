@@ -9,7 +9,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 import CartDropdown from '../../components/cart-dropdown'
-import { Link as SSLink } from 'design'
+import { Link as SSLink } from '@/design'
 import { textXlSemi } from '@/design/tailwind/custom-css-classes'
 
 const Nav = () => {

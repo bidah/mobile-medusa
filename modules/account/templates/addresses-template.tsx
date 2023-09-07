@@ -1,6 +1,6 @@
 import { useAccount } from '@/lib/context/account-context'
 import AddressBook from '../components/address-book'
-import { View, Pressable, Text } from 'design'
+import { View, Pressable, Text } from '@/design'
 import {
   text2xlSemi,
   textBaseRegular,

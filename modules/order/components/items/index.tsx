@@ -5,7 +5,7 @@ import LineItemPrice from "modules/common/components/line-item-price"
 import Thumbnail from "modules/products/components/thumbnail"
 import SkeletonLineItem from "modules/skeletons/components/skeleton-line-item"
 import { CalculatedVariant } from "types/medusa"
-import {View, Text, Link} from 'design'
+import {View, Text, Link} from '@/design'
 
 
 type ItemsProps = {

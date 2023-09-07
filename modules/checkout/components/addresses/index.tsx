@@ -4,7 +4,7 @@ import Checkbox from '@/modules/common/components/checkbox'
 import Spinner from '@/modules/common/icons/spinner'
 import BillingAddress from '../billing_address'
 import ShippingAddress from '../shipping-address'
-import { ScrollView, View, Text, Pressable } from 'design'
+import { ScrollView, View, Text, Pressable } from '@/design'
 import {
   textSmallRegular,
   textXlSemi,

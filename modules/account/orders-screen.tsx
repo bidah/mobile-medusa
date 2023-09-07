@@ -1,4 +1,4 @@
-import { ScrollView, View, Text } from 'design'
+import { ScrollView, View, Text } from '@/design'
 import OrderDetails from './templates/orders-template'
 
 export const OrdersScreen = () => {

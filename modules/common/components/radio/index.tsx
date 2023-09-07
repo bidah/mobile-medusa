@@ -1,5 +1,5 @@
 import clsx from 'clsx'
-import { View } from 'design'
+import { View } from '@/design'
 
 const Radio = ({ checked }: { checked: boolean }) => {
   return (

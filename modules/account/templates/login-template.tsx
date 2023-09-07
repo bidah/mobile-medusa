@@ -2,7 +2,7 @@ import { useAccount } from '@/lib/context/account-context'
 import Register from '@/modules/account/components/register'
 import { useRouter } from 'expo-router'
 import { useEffect } from 'react'
-import { View, Text } from 'design'
+import { View, Text } from '@/design'
 import Login from '../components/login'
 
 const LoginTemplate = () => {

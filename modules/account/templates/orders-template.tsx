@@ -1,5 +1,5 @@
 import OrderOverview from '../components/order-overview'
-import { View, Text } from 'design'
+import { View, Text } from '@/design'
 import {
   text2xlSemi,
   textBaseRegular,

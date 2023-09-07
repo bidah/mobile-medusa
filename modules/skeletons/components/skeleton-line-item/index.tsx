@@ -1,4 +1,4 @@
-import { View } from 'design'
+import { View } from '@/design'
 
 const SkeletonLineItem = () => {
   return (

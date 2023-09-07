@@ -4,7 +4,7 @@ import OptionSelect from '@/modules/products/components/option-select'
 import clsx from 'clsx'
 import React, { useMemo } from 'react'
 import { Product } from '@/types/medusa'
-import { View, Link, Text } from 'design'
+import { View, Link, Text } from '@/design'
 import Button from '../../../common/components/button'
 import {
   textBaseRegular,

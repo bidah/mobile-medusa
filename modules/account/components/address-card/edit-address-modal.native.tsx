@@ -11,10 +11,10 @@ import Spinner from '@/modules/common/icons/spinner'
 import Trash from '@/modules/common/icons/trash'
 import clsx from 'clsx'
 import React, { useCallback, useMemo, useRef, useState } from 'react'
-import { View, Text, Pressable, Columns } from 'design'
+import { View, Text, Pressable, Columns } from '@/design'
 import { FormProvider, useForm } from 'react-hook-form'
 import { textSmallRegular } from '../../../../design/tailwind/custom-css-classes'
-import { Stack } from 'design'
+import { Stack } from '@/design'
 import BottomSheet, {
   BottomSheetModal,
   BottomSheetScrollView,

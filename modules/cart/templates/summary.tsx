@@ -1,7 +1,7 @@
 import { Cart } from '@medusajs/medusa'
 import Button from '@/modules/common/components/button'
 import CartTotals from '@/modules/common/components/cart-totals'
-import { Link, Stack } from 'design'
+import { Link, Stack } from '@/design'
 import { useRouter } from 'expo-router'
 
 type SummaryProps = {

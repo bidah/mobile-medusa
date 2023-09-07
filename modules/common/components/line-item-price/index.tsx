@@ -3,7 +3,7 @@ import { Region } from '@medusajs/medusa'
 import clsx from 'clsx'
 import { formatAmount } from 'medusa-react'
 import { CalculatedVariant } from '@/types/medusa'
-import { View, Text } from 'design'
+import { View, Text } from '@/design'
 import { textBaseRegular } from '../../../../design/tailwind/custom-css-classes'
 
 type LineItemPriceProps = {

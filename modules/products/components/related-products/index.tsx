@@ -9,7 +9,7 @@ import { useCart } from 'medusa-react'
 import { useMemo } from 'react'
 import { useInfiniteQuery } from '@tanstack/react-query'
 import ProductPreview from '../product-preview'
-import { View, Text, Tiles } from 'design'
+import { View, Text, Tiles } from '@/design'
 import {
   text2xlRegular,
   textBaseRegular,

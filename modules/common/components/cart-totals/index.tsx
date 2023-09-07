@@ -1,7 +1,7 @@
 import { Cart } from '@medusajs/medusa'
 import { formatAmount } from 'medusa-react'
 import React from 'react'
-import { View, Text } from 'design'
+import { View, Text } from '@/design'
 import {
   textBaseRegular,
   textSmallRegular,

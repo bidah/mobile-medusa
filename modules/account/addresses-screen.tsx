@@ -1,4 +1,4 @@
-import { ScrollView, Text } from 'design'
+import { ScrollView, Text } from '@/design'
 import AddressesTemplate from './templates/addresses-template'
 
 export const AddressesScreen = () => {

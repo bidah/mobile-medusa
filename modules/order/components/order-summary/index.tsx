@@ -1,6 +1,6 @@
 import { Order } from "@medusajs/medusa"
 import { formatAmount } from "medusa-react"
-import {View, Pressable, Text} from 'design'
+import {View, Pressable, Text} from '@/design'
 import {textBaseRegular, textBaseSemi, textSmallRegular} from "../../../../design/tailwind/custom-css-classes";
 
 

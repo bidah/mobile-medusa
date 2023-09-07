@@ -1,5 +1,5 @@
 import { Order } from '@medusajs/medusa'
-import { View, Pressable, Text } from 'design'
+import { View, Pressable, Text } from '@/design'
 import {
   text2xlSemi,
   textSmallRegular,

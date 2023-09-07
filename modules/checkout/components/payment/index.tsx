@@ -3,7 +3,7 @@ import Spinner from '@/modules/common/icons/spinner'
 import { useEffect } from 'react'
 import PaymentContainer from '../payment-container'
 import StepContainer from '../step-container'
-import {View, Pressable, Text} from 'design'
+import {View, Pressable, Text} from '@/design'
 
 const Payment = () => {
   const {

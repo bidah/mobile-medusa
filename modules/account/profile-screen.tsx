@@ -1,4 +1,4 @@
-import { ScrollView, Text } from 'design'
+import { ScrollView, Text } from '@/design'
 import ProfileTemplate from './templates/profile-template'
 
 export const ProfileScreen = () => {

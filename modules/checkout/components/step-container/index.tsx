@@ -1,7 +1,7 @@
 import { Disclosure } from '@headlessui/react'
 import { useCheckout } from '@/lib/context/checkout-context'
 import clsx from 'clsx'
-import { View, Text } from 'design'
+import { View, Text } from '@/design'
 import { textXlSemi } from '../../../../design/tailwind/custom-css-classes'
 
 type StepContainerProps = {

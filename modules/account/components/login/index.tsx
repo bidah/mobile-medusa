@@ -4,7 +4,7 @@ import Button from '@/modules/common/components/button'
 import Input from '@/modules/common/components/input'
 import { useRouter } from 'expo-router'
 import { useState } from 'react'
-import { View, Text, Pressable, Stack } from 'design'
+import { View, Text, Pressable, Stack } from '@/design'
 
 import { FieldValues, useForm, FormProvider } from 'react-hook-form'
 

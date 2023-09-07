@@ -9,7 +9,7 @@ import {
   StripeCardNumberElementOptions,
 } from "@stripe/stripe-js"
 import React, { useMemo } from "react"
-import {View, Text} from 'design'
+import {View, Text} from '@/design'
 
 
 const PaymentStripe: React.FC = () => {

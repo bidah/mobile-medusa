@@ -1,6 +1,6 @@
 import { Customer } from '@medusajs/medusa'
 import React from 'react'
-import { View, Text } from 'design'
+import { View, Text } from '@/design'
 
 import Detail from '../detail-container'
 import EditEmailModal from './edit-email-modal'

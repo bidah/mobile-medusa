@@ -13,7 +13,7 @@ import { useInfiniteQuery } from '@tanstack/react-query'
 //   InView as NativeInView,
 // } from 'react-native-intersection-observer'
 
-import { View, Pressable, Text } from 'design'
+import { View, Pressable, Text } from '@/design'
 
 type InfiniteProductsType = {
   params: StoreGetProductsParams

@@ -9,7 +9,7 @@ import Modal from '@/modules/common/components/modal'
 import Spinner from '@/modules/common/icons/spinner'
 import { useUpdateMe } from 'medusa-react'
 import React, { useState } from 'react'
-import { View, Text } from 'design'
+import { View, Text } from '@/design'
 
 import { useForm } from 'react-hook-form'
 

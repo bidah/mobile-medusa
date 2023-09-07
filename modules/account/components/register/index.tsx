@@ -4,7 +4,7 @@ import Button from '@/modules/common/components/button'
 import Input from '@/modules/common/components/input'
 import { useRouter } from 'expo-router'
 import { useState } from 'react'
-import { View, Text, Stack, Pressable, Link } from 'design'
+import { View, Text, Stack, Pressable, Link } from '@/design'
 
 import { FieldValues, FormProvider, useForm } from 'react-hook-form'
 import UnderlineLink from '../../../common/components/underline-link'

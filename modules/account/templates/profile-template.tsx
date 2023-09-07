@@ -4,7 +4,7 @@ import ProfileName from '@/modules/account/components/profile-name'
 import ProfilePassword from '@/modules/account/components/profile-password'
 import ProfileBillingAddress from '../components/profile-billing-address'
 import ProfilePhone from '../components/profile-phone'
-import { View, Pressable, Text, Stack } from 'design'
+import { View, Pressable, Text, Stack } from '@/design'
 import { text2xlSemi } from '../../../design/tailwind/custom-css-classes'
 
 const ProfileTemplate = () => {

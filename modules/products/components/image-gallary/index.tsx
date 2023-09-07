@@ -1,5 +1,5 @@
 import { Image as MedusaImage } from '@medusajs/medusa'
-import { Image, View, Pressable, Text } from 'design'
+import { Image, View, Pressable, Text } from '@/design'
 import { useRef } from 'react'
 
 type ImageGalleryProps = {

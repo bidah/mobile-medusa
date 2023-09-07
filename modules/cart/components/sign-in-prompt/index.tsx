@@ -1,5 +1,5 @@
 import Button from '@/modules/common/components/button'
-import { View, Text, Link } from 'design'
+import { View, Text, Link } from '@/design'
 import {
   textBaseRegular,
   textXlSemi,

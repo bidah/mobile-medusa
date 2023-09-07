@@ -6,7 +6,7 @@ import EmptyCartMessage from '../components/empty-cart-message'
 import SignInPrompt from '../components/sign-in-prompt'
 import ItemsTemplate from './items'
 import Summary from './summary'
-import { View } from 'design'
+import { View } from '@/design'
 import { contentContainer } from '../../../design/tailwind/custom-css-classes'
 
 const CartTemplate = () => {

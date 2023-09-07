@@ -1,6 +1,6 @@
 import { A, H1, P, Text, TextLink } from '@/design/typography'
 import UnderlineLink from '@/modules/common/components/underline-link'
-import { View, Image } from 'design'
+import { View, Image } from '@/design'
 import { text2xlSemi } from '../../../../design/tailwind/custom-css-classes'
 
 const Hero = () => {

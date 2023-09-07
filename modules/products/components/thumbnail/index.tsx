@@ -3,7 +3,7 @@
 // import PlaceholderImage from '@/modules/common/icons/placeholder-image'
 import clsx from 'clsx'
 import React from 'react'
-import { View, Image, Text } from 'design'
+import { View, Image, Text } from '@/design'
 import { ImageSourcePropType } from 'react-native'
 
 type ThumbnailProps = {

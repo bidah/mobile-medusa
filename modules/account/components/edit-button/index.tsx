@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Pressable, Text } from 'design'
+import { View, Pressable, Text } from '@/design'
 
 const EditButton: React.FC = (props) => {
   return (

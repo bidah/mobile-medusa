@@ -1,5 +1,5 @@
 import Alert from '@/modules/common/icons/alert'
-import {View,Text} from 'design'
+import {View,Text} from '@/design'
 
 const PaymentTest = () => {
   return (

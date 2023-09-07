@@ -1,7 +1,7 @@
 import clsx from 'clsx'
 import { ProductPreviewType } from '@/types/global'
 import Thumbnail from '../thumbnail'
-import { View, Text, Link, Pressable } from 'design'
+import { View, Text, Link, Pressable } from '@/design'
 import { useRouter } from 'expo-router'
 
 const ProductPreview = ({

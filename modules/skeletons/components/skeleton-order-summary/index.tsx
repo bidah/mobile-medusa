@@ -1,6 +1,6 @@
 import SkeletonButton from '@/modules/skeletons/components/skeleton-button'
 import SkeletonCartTotals from '@/modules/skeletons/components/skeleton-cart-totals'
-import { View } from 'design'
+import { View } from '@/design'
 
 const SkeletonOrderSummary = () => {
   return (

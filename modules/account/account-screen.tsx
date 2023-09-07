@@ -1,4 +1,4 @@
-import { ScrollView, View, Text } from 'design'
+import { ScrollView, View, Text } from '@/design'
 import OverviewTemplate from './templates/overview-template'
 
 export const AccountScreen = () => {

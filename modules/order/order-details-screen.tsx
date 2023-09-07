@@ -1,4 +1,4 @@
-import { View, ScrollView, Stack } from 'design'
+import { View, ScrollView, Stack } from '@/design'
 import OrderCompletedTemplate from './templates/order-completed-template'
 import { dehydrate, QueryClient, useQuery } from '@tanstack/react-query'
 import { medusaClient } from '@/lib/config'

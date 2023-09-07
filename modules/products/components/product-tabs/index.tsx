@@ -4,7 +4,7 @@ import FastDelivery from '@/modules/common/icons/fast-delivery'
 import Refresh from '@/modules/common/icons/refresh'
 import clsx from 'clsx'
 import { useMemo, useState } from 'react'
-import { View, Text, Pressable, Stack, Columns } from 'design'
+import { View, Text, Pressable, Stack, Columns } from '@/design'
 import { Column } from '@mobily/stacks'
 import { textSmallRegular } from '../../../../design/tailwind/custom-css-classes'
 

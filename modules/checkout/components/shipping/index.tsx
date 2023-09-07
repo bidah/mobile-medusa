@@ -13,7 +13,7 @@ import {
   textBaseRegular,
   textSmallRegular,
 } from '../../../../design/tailwind/custom-css-classes'
-import { View, Text } from 'design'
+import { View, Text } from '@/design'
 import { Pressable } from 'react-native'
 
 type ShippingOption = {

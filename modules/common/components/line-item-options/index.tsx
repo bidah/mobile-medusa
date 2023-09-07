@@ -1,5 +1,5 @@
 import { ProductVariant } from '@medusajs/medusa'
-import { View, Text } from 'design'
+import { View, Text } from '@/design'
 import { textSmallRegular } from '@/design/tailwind/custom-css-classes'
 
 type LineItemOptionsProps = { variant: ProductVariant }

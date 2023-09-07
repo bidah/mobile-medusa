@@ -1,5 +1,5 @@
 import React from 'react'
-import { Svg, Path, Circle } from 'design'
+import { Svg, Path, Circle } from '@/design'
 import { IconProps } from '@/types/icon'
 
 const ChevronDown: React.FC<IconProps> = ({

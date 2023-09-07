@@ -1,5 +1,5 @@
 import { Address, ShippingMethod } from "@medusajs/medusa"
-import {View, Text} from 'design'
+import {View, Text} from '@/design'
 import {textBaseRegular, textBaseSemi, textSmallRegular} from "../../../../design/tailwind/custom-css-classes";
 
 type ShippingDetailsProps = {
