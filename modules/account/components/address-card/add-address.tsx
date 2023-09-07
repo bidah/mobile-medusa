@@ -136,7 +136,6 @@ const AddAddressNative: React.FC = () => {
                   })}
                   required
                   errors={errors}
-                  autoComplete="given-name"
                 />
                 <Input
                   label="Last name"
@@ -145,7 +144,6 @@ const AddAddressNative: React.FC = () => {
                   })}
                   required
                   errors={errors}
-                  autoComplete="family-name"
                 />
               </Columns>
               <Input label="Company" {...register("company")} errors={errors} />
@@ -156,13 +154,11 @@ const AddAddressNative: React.FC = () => {
                 })}
                 required
                 errors={errors}
-                autoComplete="address-line1"
               />
               <Input
                 label="Apartment, suite, etc."
                 {...register("address_2")}
                 errors={errors}
-                autoComplete="address-line2"
               />
               <Columns space={2}>
                 <Column width={"1/3"}>
@@ -173,7 +169,6 @@ const AddAddressNative: React.FC = () => {
                     })}
                     required
                     errors={errors}
-                    autoComplete="postal-code"
                   />
                 </Column>
                 <Column width={"2/3"}>
@@ -184,7 +179,6 @@ const AddAddressNative: React.FC = () => {
                     })}
                     errors={errors}
                     required
-                    autoComplete="locality"
                   />
                 </Column>
               </Columns>
@@ -192,16 +186,14 @@ const AddAddressNative: React.FC = () => {
                 label="Province / State"
                 {...register("province")}
                 errors={errors}
-                autoComplete="address-level1"
               />
-              <CountrySelect
-                {...register("country_code", { required: true })}
-              />
+              {/*<CountrySelect*/}
+              {/*  {...register("country_code", { required: true })}*/}
+              {/*/>*/}
               <Input
                 label="Phone"
                 {...register("phone")}
                 errors={errors}
-                autoComplete="phone"
               />
             </Stack>
             {error && (
