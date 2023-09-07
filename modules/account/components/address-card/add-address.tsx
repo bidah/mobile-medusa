@@ -19,7 +19,7 @@ import BottomSheet, {
 import {
   textBaseSemi,
   textSmallRegular,
-} from "../../../../design/tailwind/custom-css-classes";
+} from "@/design/tailwind/custom-css-classes";
 
 type FormValues = {
   first_name: string;
