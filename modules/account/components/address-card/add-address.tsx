@@ -1,105 +1,112 @@
-import { medusaClient } from "lib/config";
-import { useAccount } from "lib/context/account-context";
-import useToggleState from "lib/hooks/use-toggle-state";
+import { medusaClient } from 'lib/config'
+import { useAccount } from 'lib/context/account-context'
+import useToggleState from 'lib/hooks/use-toggle-state'
 import CountrySelect from "modules/checkout/components/country-select";
-import Button from "modules/common/components/button";
-import Input from "modules/common/components/input";
-import Modal from "modules/common/components/modal";
-import Plus from "modules/common/icons/plus";
-import Spinner from "modules/common/icons/spinner";
-import React, { useCallback, useMemo, useRef, useState } from "react";
-import { View, Text, Pressable, Columns, Column, Stack, Row } from "design";
+import Button from 'modules/common/components/button'
+import Input from 'modules/common/components/input'
+import Modal from 'modules/common/components/modal'
+import Plus from 'modules/common/icons/plus'
+import Spinner from 'modules/common/icons/spinner'
+import React, { useCallback, useMemo, useRef, useState } from 'react'
+import { View, Text, Pressable, Columns, Column, Stack, Row } from 'design'
 
-import { FormProvider, useForm } from "react-hook-form";
-import { Platform } from "react-native";
+import { FormProvider, useForm } from 'react-hook-form'
+import { Platform } from 'react-native'
 import BottomSheet, {
   BottomSheetModal,
   BottomSheetScrollView,
-} from "@gorhom/bottom-sheet";
+} from '@gorhom/bottom-sheet'
 import {
   textBaseSemi,
   textSmallRegular,
-} from "@/design/tailwind/custom-css-classes";
+} from '@/design/tailwind/custom-css-classes'
+import { useStore } from '@/lib/context/store-context'
 
 type FormValues = {
-  first_name: string;
-  last_name: string;
-  city: string;
-  country_code: string;
-  postal_code: string;
-  province?: string;
-  address_1: string;
-  address_2?: string;
-  phone?: string;
-  company?: string;
-};
+  first_name: string
+  last_name: string
+  city: string
+  country_code: string
+  postal_code: string
+  province?: string
+  address_1: string
+  address_2?: string
+  phone?: string
+  company?: string
+}
+
+// const CountrySelect = () => {
+//   const { countryCode, setRegion } = useStore()
+//
+//   return <Text>choose country: {countryCode}</Text>
+// }
 
 const AddAddressNative: React.FC = () => {
-  const { state, open, close } = useToggleState(false);
-  const [submitting, setSubmitting] = useState(false);
-  const [error, setError] = useState<string | undefined>(undefined);
+  const { state, open, close } = useToggleState(false)
+  const [submitting, setSubmitting] = useState(false)
+  const [error, setError] = useState<string | undefined>(undefined)
 
-  const { refetchCustomer } = useAccount();
-  const methods = useForm<FormValues>();
+  const { refetchCustomer } = useAccount()
+  const methods = useForm<FormValues>()
   const {
     register,
     handleSubmit,
     formState: { errors },
     reset,
-  } = methods;
+  } = methods
 
-  const bottomSheetRef = useRef<BottomSheet>(null);
-  const snapPoints = useMemo(() => ["65%", "65%"], []);
+  const bottomSheetRef = useRef<BottomSheet>(null)
+  const snapPoints = useMemo(() => ['65%', '65%'], [])
   const handlePresentModalPress = useCallback(() => {
-    bottomSheetRef.current?.present();
-  }, []);
+    bottomSheetRef.current?.present()
+  }, [])
 
   const handleClose = () => {
     reset({
-      first_name: "",
-      last_name: "",
-      city: "",
-      country_code: "",
-      postal_code: "",
-      address_1: "",
-      address_2: "",
-      company: "",
-      phone: "",
-      province: "",
-    });
-    bottomSheetRef.current?.close();
-  };
+      first_name: '',
+      last_name: '',
+      city: '',
+      country_code: '',
+      postal_code: '',
+      address_1: '',
+      address_2: '',
+      company: '',
+      phone: '',
+      province: '',
+    })
+    bottomSheetRef.current?.close()
+  }
 
   const submit = handleSubmit(async (data: FormValues) => {
-    setSubmitting(true);
-    setError(undefined);
+    setSubmitting(true)
+    setError(undefined)
 
     const payload = {
       first_name: data.first_name,
       last_name: data.last_name,
-      company: data.company || "",
+      company: data.company || '',
       address_1: data.address_1,
-      address_2: data.address_2 || "",
+      address_2: data.address_2 || '',
       city: data.city,
       country_code: data.country_code,
-      province: data.province || "",
+      province: data.province || '',
       postal_code: data.postal_code,
-      phone: data.phone || "",
+      phone: data.phone || '',
       metadata: {},
-    };
+    }
 
     medusaClient.customers.addresses
       .addAddress({ address: payload })
       .then(() => {
-        setSubmitting(false);
-        refetchCustomer();
-        handleClose();
+        setSubmitting(false)
+        refetchCustomer()
+        handleClose()
       })
       .catch((e) => {
-        console.error(e.message, e.response?.data?.message);
-        setError("Failed to add address, please try again.");
-      });
-  });
+        console.error(e.message, e.response?.data?.message)
+        setError('Failed to add address, please try again.')
+      })
+  })
 
   return (
     <>
@@ -115,7 +122,7 @@ const AddAddressNative: React.FC = () => {
         ref={bottomSheetRef}
         index={1}
         snapPoints={snapPoints}
-        backgroundStyle={{ backgroundColor: "white" }}
+        backgroundStyle={{ backgroundColor: 'white' }}
         backgroundComponent={(props) => (
           <View {...props} className="border-t-[1px]" />
         )}
@@ -125,57 +132,57 @@ const AddAddressNative: React.FC = () => {
             style={{
               marginHorizontal: 8,
             }}
-            keyboardShouldPersistTaps={"always"}
+            keyboardShouldPersistTaps={'always'}
           >
             <Stack space={2}>
               <Columns space={2}>
                 <Input
                   label="First name"
-                  {...register("first_name", {
-                    required: "First name is required",
+                  {...register('first_name', {
+                    required: 'First name is required',
                   })}
                   required
                   errors={errors}
                 />
                 <Input
                   label="Last name"
-                  {...register("last_name", {
-                    required: "Last name is required",
+                  {...register('last_name', {
+                    required: 'Last name is required',
                   })}
                   required
                   errors={errors}
                 />
               </Columns>
-              <Input label="Company" {...register("company")} errors={errors} />
+              <Input label="Company" {...register('company')} errors={errors} />
               <Input
                 label="Address"
-                {...register("address_1", {
-                  required: "Address is required",
+                {...register('address_1', {
+                  required: 'Address is required',
                 })}
                 required
                 errors={errors}
               />
               <Input
                 label="Apartment, suite, etc."
-                {...register("address_2")}
+                {...register('address_2')}
                 errors={errors}
               />
               <Columns space={2}>
-                <Column width={"1/3"}>
+                <Column width={'1/3'}>
                   <Input
                     label="Postal code"
-                    {...register("postal_code", {
-                      required: "Postal code is required",
+                    {...register('postal_code', {
+                      required: 'Postal code is required',
                     })}
                     required
                     errors={errors}
                   />
                 </Column>
-                <Column width={"2/3"}>
+                <Column width={'2/3'}>
                   <Input
                     label="City"
-                    {...register("city", {
-                      required: "City is required",
+                    {...register('city', {
+                      required: 'City is required',
                     })}
                     errors={errors}
                     required
@@ -184,17 +191,14 @@ const AddAddressNative: React.FC = () => {
               </Columns>
               <Input
                 label="Province / State"
-                {...register("province")}
+                {...register('province')}
                 errors={errors}
               />
+
               <CountrySelect
-                {...register("country_code", { required: true })}
+                {...register('country_code', { required: true })}
               />
-              <Input
-                label="Phone"
-                {...register("phone")}
-                errors={errors}
-              />
+              <Input label="Phone" {...register('phone')} errors={errors} />
             </Stack>
             {error && (
               <Text className={`${textSmallRegular} py-2 text-rose-500`}>
@@ -218,7 +222,7 @@ const AddAddressNative: React.FC = () => {
         </FormProvider>
       </BottomSheetModal>
     </>
-  );
-};
+  )
+}
 
-export default AddAddressNative;
+export default AddAddressNative
