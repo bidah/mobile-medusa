@@ -26,15 +26,14 @@ const OrderCompletedTemplate: React.FC<OrderCompletedTemplateProps> = ({
             cartId={order.cart_id}
           />
           <View className="small:gap-4 small:p-10 grid grid-cols-1 gap-2 border-b border-gray-200 p-5 lg:grid-cols-2">
-            {/*<View className="border-b border-gray-200">*/}
-            {/* <PaymentDetails
+            <PaymentDetails
               payments={order.payments}
               paymentStatus={order.payment_status}
-            /> */}
-            {/* <ShippingDetails
+            />
+            <ShippingDetails
               shippingMethods={order.shipping_methods}
               address={order.shipping_address}
-            /> */}
+            />
           </View>
           <View className="small:gap-4 small:p-10 grid grid-cols-1 gap-2 p-5 lg:grid-cols-2">
             <Help />
