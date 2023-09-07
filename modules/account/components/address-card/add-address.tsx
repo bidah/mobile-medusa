@@ -97,8 +97,6 @@ const AddAddressNative: React.FC = () => {
       })
       .catch((e) => {
         console.error(e.message, e.response?.data?.message);
-
-        setSubmitting(false);
         setError("Failed to add address, please try again.");
       });
   });
@@ -196,10 +194,9 @@ const AddAddressNative: React.FC = () => {
                 errors={errors}
                 autoComplete="address-level1"
               />
-              {/*<CountrySelect*/}
-              {/*  {...register('country_code', { required: true })}*/}
-              {/*  autoComplete="country"*/}
-              {/*/>*/}
+              <CountrySelect
+                {...register("country_code", { required: true })}
+              />
               <Input
                 label="Phone"
                 {...register("phone")}

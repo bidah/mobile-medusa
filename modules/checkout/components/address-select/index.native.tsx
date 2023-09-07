@@ -1,72 +1,73 @@
-import { useCheckout } from 'lib/context/checkout-context'
-import { Address } from '@medusajs/medusa'
-import Radio from 'modules/common/components/radio'
-import ChevronDown from 'modules/common/icons/chevron-down'
-import clsx from 'clsx'
-import { isEqual, omit } from 'lodash'
-import { Fragment, useCallback, useMemo, useState } from 'react'
-import { useWatch } from 'react-hook-form'
-import { Pressable, Text, View } from '../../../../design'
-import Button from '../../../common/components/button'
-import { useRef } from 'react/index'
+import { useCheckout } from "lib/context/checkout-context";
+import { Address } from "@medusajs/medusa";
+import Radio from "modules/common/components/radio";
+import ChevronDown from "modules/common/icons/chevron-down";
+import clsx from "clsx";
+import { isEqual, omit } from "lodash";
+import { Fragment, useCallback, useMemo, useState } from "react";
+import { useWatch } from "react-hook-form";
+import { Pressable, Text, View } from "../../../../design";
+import Button from "../../../common/components/button";
+import { useRef } from "react/index";
 import BottomSheet, {
   BottomSheetModal,
   BottomSheetScrollView,
-} from '@gorhom/bottom-sheet'
-import { StyleSheet } from 'react-native'
-import { FullWindowOverlay } from 'react-native-screens'
+} from "@gorhom/bottom-sheet";
+import { StyleSheet } from "react-native";
+import { FullWindowOverlay } from "react-native-screens";
 
 type AddressSelectProps = {
-  addresses: Address[]
-}
+  addresses: Address[];
+};
 
 const AddressSelect = ({ addresses }: AddressSelectProps) => {
-  const [selected, setSelected] = useState<string | undefined>(undefined)
+  const [selected, setSelected] = useState<string | undefined>(undefined);
 
-  const { control, setSavedAddress } = useCheckout()
-  const bottomSheetRef = useRef<BottomSheet>(null)
+  const { control, setSavedAddress } = useCheckout();
+  const bottomSheetRef = useRef<BottomSheet>(null);
   const handleSelect = (id: string) => {
-    const savedAddress = addresses.find((a) => a.id === id)
+    const savedAddress = addresses.find((a) => a.id === id);
     if (savedAddress) {
-      setSavedAddress(savedAddress)
+      setSavedAddress(savedAddress);
     }
-    setSelected(id)
+    setSelected(id);
     setTimeout(() => {
-      bottomSheetRef.current?.close()
-    }, 1000)
-  }
+      bottomSheetRef.current?.close();
+    }, 1000);
+  };
 
   const currentShippingAddress = useWatch({
     control,
-    name: 'shipping_address',
-  })
+    name: "shipping_address",
+  });
 
   const selectedAddress = useMemo(() => {
     for (const address of addresses) {
       const checkEquality = isEqual(
         omit(address, [
-          'id',
-          'created_at',
-          'updated_at',
-          'country',
-          'deleted_at',
-          'metadata',
-          'customer_id',
-          'country_code',
+          "id",
+          "created_at",
+          "updated_at",
+          "country",
+          "deleted_at",
+          "metadata",
+          "customer_id",
+          // 'country_code',
         ]),
-        omit(currentShippingAddress, ['country_code'])
-      )
+        currentShippingAddress
+        // omit(currentShippingAddress, ['country_code'])
+      );
 
       if (checkEquality) {
-        return address
+        return address;
       }
     }
-  }, [currentShippingAddress, addresses])
+  }, [currentShippingAddress, addresses]);
 
-  const snapPoints = useMemo(() => ['65%', '65%'], [])
+  const snapPoints = useMemo(() => ["65%", "65%"], []);
   const handlePresentModalPress = useCallback(() => {
-    bottomSheetRef.current?.present()
-  }, [])
+    bottomSheetRef.current?.present();
+  }, []);
 
   return (
     <View className="relative z-40">
@@ -74,7 +75,7 @@ const AddressSelect = ({ addresses }: AddressSelectProps) => {
         ref={bottomSheetRef}
         index={1}
         snapPoints={snapPoints}
-        backgroundStyle={{ backgroundColor: 'white' }}
+        backgroundStyle={{ backgroundColor: "white" }}
         backgroundComponent={(props) => (
           <View {...props} className="border-t-[1px]" />
         )}
@@ -117,7 +118,7 @@ const AddressSelect = ({ addresses }: AddressSelectProps) => {
                     </View>
                   </View>
                 </Pressable>
-              )
+              );
             })}
           </View>
         </BottomSheetScrollView>
@@ -125,19 +126,19 @@ const AddressSelect = ({ addresses }: AddressSelectProps) => {
 
       <Button
         style={
-          'border-top-0 z-20 border border-gray-200 bg-white sm:text-sm ph-2 px-4 pb-1'
+          "border-top-0 z-20 border border-gray-200 bg-white sm:text-sm ph-2 px-4 pb-1"
         }
         onPress={handlePresentModalPress}
       >
         <View className="flex min-w-full flex-row items-center justify-between ">
           <Text className="between block truncate text-black">
-            {selectedAddress ? selectedAddress.address_1 : 'Choose an address'}
+            {selectedAddress ? selectedAddress.address_1 : "Choose an address"}
           </Text>
           <ChevronDown size={16} />
         </View>
       </Button>
     </View>
-  )
-}
+  );
+};
 
-export default AddressSelect
+export default AddressSelect;
