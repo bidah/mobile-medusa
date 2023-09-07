@@ -34,19 +34,12 @@ interface StoreContext {
 const StoreContext = React.createContext<StoreContext | null>(null);
 
 export const useStore = () => {
-  const context = React.useContext(StoreContext);
-  if (!context) {
-    return {
-      countryCode: undefined,
-      setRegion: () => {},
-      addItem: () => {},
-      updateItem: () => {},
-      deleteItem: () => {},
-      resetCart: () => {},
-    };
+  const context = React.useContext(StoreContext)
+  if (context === null) {
+    throw new Error('useStore must be used within a StoreProvider')
   }
-  return context;
-};
+  return context
+}
 
 interface StoreProps {
   children: React.ReactNode;

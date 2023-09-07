@@ -187,9 +187,9 @@ const AddAddressNative: React.FC = () => {
                 {...register("province")}
                 errors={errors}
               />
-              {/*<CountrySelect*/}
-              {/*  {...register("country_code", { required: true })}*/}
-              {/*/>*/}
+              <CountrySelect
+                {...register("country_code", { required: true })}
+              />
               <Input
                 label="Phone"
                 {...register("phone")}
