@@ -42,6 +42,7 @@
     "react-hook-form": "^7.45.4",
     "react-instantsearch-hooks-web": "^6.47.3",
     "react-native": "0.72.4",
+    "react-native-dialog": "^9.3.0",
     "react-native-gesture-handler": "^2.10.2",
     "react-native-get-random-values": "^1.9.0",
     "react-native-heroicons": "^3.2.0",
