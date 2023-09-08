@@ -7,6 +7,10 @@ import { useState } from 'react'
 import { View, Text, Pressable, Stack } from '@/design'
 
 import { FieldValues, useForm, FormProvider } from 'react-hook-form'
+import {
+  textBaseRegular,
+  textLargeSemi,
+} from '@/design/tailwind/custom-css-classes'
 
 interface SignInCredentials extends FieldValues {
   email: string
@@ -45,8 +49,8 @@ const Login = () => {
   return (
     <FormProvider {...methods}>
       <View className="m mx-auto flex w-full max-w-sm flex-col items-center">
-        <Text className="text-large-semi mb-6 uppercase">Welcome back</Text>
-        <Text className="text-base-regular mb-8 text-center text-gray-700">
+        <Text className={`${textLargeSemi} mb-6 uppercase`}>Welcome back</Text>
+        <Text className={`${textBaseRegular} mb-8 text-center text-gray-700`}>
           Sign in to access an enhanced shopping experience.
         </Text>
         <View className="w-full">

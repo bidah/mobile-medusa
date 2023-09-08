@@ -1,4 +1,3 @@
-
 <h1 align="center">
   Mobile Medusa
 </h1>
@@ -15,11 +14,8 @@ Combine Medusa's modules for your commerce backend with the latest Expo features
   </a>
 </p>
 
-
 <p style="text-align:center; display: block;">
-<img src="https://github.com/bidah/mobile-medusa/assets/1574028/236443d3-818b-43b0-bc88-b8c4605420e7" width="32%" />
-<img src="https://github.com/bidah/mobile-medusa/assets/1574028/b627d749-7cc9-418e-b904-27c6f5661e5c" width="32%" />
-<img src="https://github.com/bidah/mobile-medusa/assets/1574028/f484cde2-1d8b-4529-bb45-b3e962c9521c" width="32%" />
+<img src="https://github.com/bidah/mobile-medusa/assets/1574028/a466f8f6-7009-42c9-9a68-2e3ea170d9f9" width="100%" />
 </p>
 
 ### Prerequisites
@@ -86,3 +82,41 @@ yarn start
 # Universal Medusa
 
 If you want to kickstart a medusa project with web and mobile in a integrated setup for cross platform development come visit us at [Universal Medusa Docs](http://dub.sh/universalmedusa)
+
+# Screens
+
+<kbd>
+<p style="text-align:center; display: block;">
+<img src="https://github.com/bidah/mobile-medusa/assets/1574028/236443d3-818b-43b0-bc88-b8c4605420e7" width="32%" style="border:1px solid black" />
+<img src="https://github.com/bidah/mobile-medusa/assets/1574028/b627d749-7cc9-418e-b904-27c6f5661e5c" width="32%" style="border:1px solid black" />
+
+<img src="https://github.com/bidah/mobile-medusa/assets/1574028/f484cde2-1d8b-4529-bb45-b3e962c9521c" width="32%" style="border:1px solid black" />
+</p>
+
+<p style="text-align:center; display: block;">
+<img src="https://github.com/bidah/mobile-medusa/assets/1574028/18811bd0-6a61-4ddf-9754-c6100153253a" width="32%" style="border:1px solid black" />
+<img src="https://github.com/bidah/mobile-medusa/assets/1574028/39be0435-d061-4d32-bccf-214199f27340" width="32%" style="border:1px solid black" />
+<img src="https://github.com/bidah/mobile-medusa/assets/1574028/051107cd-849b-4982-bded-2b139f565e84" width="32%" style="border:1px solid black" />
+</p>
+<p style="text-align:center; display: block;">
+<img src="https://github.com/bidah/mobile-medusa/assets/1574028/5b88a9e2-c769-41c6-9767-e14cf82b5d31" width="32%" style="border:1px solid black" />
+<img src="https://github.com/bidah/mobile-medusa/assets/1574028/bfadfa9f-ad9a-405d-9b87-caf2b9963007" width="32%" style="border:1px solid black" />
+<img src="https://github.com/bidah/mobile-medusa/assets/1574028/ae29e2eb-2c15-44e5-9e15-2e002c787b18" width="32%" style="border:1px solid black" />
+</p>
+<p style="text-align:center; display: block;">
+<img src="https://github.com/bidah/mobile-medusa/assets/1574028/3545538f-2191-42d1-8cd7-d41a55fd647f" width="32%" style="border:1px solid black" />
+<img src="https://github.com/bidah/mobile-medusa/assets/1574028/e9d7d7e7-3de6-429d-a00b-83f614e138c5" width="32%" style="border:1px solid black" />
+<img src="https://github.com/bidah/mobile-medusa/assets/1574028/040f731f-a3a5-4dbc-8e13-57c880142604" width="32%" style="border:1px solid black" />
+</p>
+
+<p style="text-align:center; display: block;">
+<img src="https://github.com/bidah/mobile-medusa/assets/1574028/fd42149f-1fa7-4a5e-be41-c911a35514d3" width="32%" style="border:1px solid black" />
+<img src="https://github.com/bidah/mobile-medusa/assets/1574028/24070db1-2e76-49a2-bbd6-22adf0a6504f" width="32%" style="border:1px solid black" />
+</p>
+</kbd>
+
+# About Author
+
+### Rodrigo Figueroa
+
+Follow Rodrigo Figueroa, creator of `Mobile Medusa` and `Universal Medusa`, on Twitter: [@bidah](https://twitter.com/bidah)
