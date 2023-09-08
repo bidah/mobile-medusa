@@ -23,10 +23,12 @@ Combine Medusa's modules for your commerce backend with the latest Expo features
 To use the starter you should have:
 
 - Medusa server running locally on port 9000.
-  For a quick setup, run:
 
-Check out [Medusa Docs](https://docs.medusajs.com) for more details and troubleshooting about Medusa.
-Check out [Expo docs](https://https://docs.expo.dev/) for more details and troubleshooting Expo.
+### Core libraries documentation
+
+- Check out [Medusa Docs](https://docs.medusajs.com) for more details and troubleshooting about Medusa.
+
+- Check out [Expo docs](https://https://docs.expo.dev/) for more details and troubleshooting Expo.
 
 # Overview
 
