@@ -47,9 +47,14 @@ Features include:
   - Product Detail Screen
   - Product Overview Screen
   - Login Screen
+  - Register Screen
   - Product Collections Screen
   - Cart Screen
   - User Account Screen
+    - Profile Screen
+    - Addresses Screen
+    - Orders Screen
+    - Order Screen
   - Order Details Screen
     **All logic and user flows through the app are working with the Medusa Backend**
 
