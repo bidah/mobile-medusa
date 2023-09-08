@@ -1,6 +1,9 @@
 <h1 align="center">
   Mobile Medusa
 </h1>
+<h2 align="center">
+React Native Medusa.js Starter Template
+</h2>
 
 <p align="center">
 Combine Medusa's modules for your commerce backend with the latest Expo features for a mobile storefront that matches Medusa Next.js starter functionality, look and feel.</p>
