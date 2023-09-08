@@ -1,5 +1,5 @@
 <h1 align="center">
-  Mobile Medusa
+  📱 Mobile Medusa
 </h1>
 <h2 align="center">
 React Native Medusa.js Starter Template
