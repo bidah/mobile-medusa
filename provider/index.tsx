@@ -16,11 +16,11 @@ export function Provider({ children }: { children: React.ReactNode }) {
         <StacksProvider spacing={5} breakpoints={breakPointsAsArray}>
           <CartDropdownProvider>
             <Cart>
-              <StoreProvider>
-                <AccountProvider>
-                  <BottomSheetProvider>{children}</BottomSheetProvider>
-                </AccountProvider>
-              </StoreProvider>
+              <BottomSheetProvider>
+                <StoreProvider>
+                  <AccountProvider>{children}</AccountProvider>
+                </StoreProvider>
+              </BottomSheetProvider>
             </Cart>
           </CartDropdownProvider>
         </StacksProvider>
