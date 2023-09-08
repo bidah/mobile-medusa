@@ -44,6 +44,7 @@ The Mobile Medusa Next.js Starter is built with:
 Features include:
 
 - Full ecommerce support that has parity of screens with [Medusa Next.js Starter](https://github.com/medusajs/nextjs-starter-medusa):
+
   - Product Detail
   - Product Overview
   - Login
@@ -54,9 +55,10 @@ Features include:
     - Profile
     - Addresses
     - Orders
-    - Order
   - Order Details
-    **All logic and user flows through the app are working with the Medusa Backend**
+  - Order Confirmation
+
+  **All logic and user flows through the app are working with the Medusa Backend**
 
 # Quickstart
 
