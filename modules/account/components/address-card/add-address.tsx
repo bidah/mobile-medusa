@@ -1,7 +1,7 @@
 import { medusaClient } from 'lib/config'
 import { useAccount } from 'lib/context/account-context'
 import useToggleState from 'lib/hooks/use-toggle-state'
-import CountrySelect from "modules/checkout/components/country-select";
+import CountrySelect from 'modules/checkout/components/country-select'
 import Button from 'modules/common/components/button'
 import Input from 'modules/common/components/input'
 import Modal from 'modules/common/components/modal'
@@ -72,9 +72,12 @@ const AddAddressNative: React.FC = () => {
   }
 
   const submit = handleSubmit(async (data: FormValues) => {
+    console.log('on handleSubmit')
+
     setSubmitting(true)
     setError(undefined)
 
+    console.log('before payload')
     const payload = {
       first_name: data.first_name,
       last_name: data.last_name,
@@ -88,6 +91,8 @@ const AddAddressNative: React.FC = () => {
       phone: data.phone || '',
       metadata: {},
     }
+
+    console.log(payload)
 
     medusaClient.customers.addresses
       .addAddress({ address: payload })

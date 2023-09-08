@@ -203,7 +203,6 @@ export const StoreProvider = ({ children }: StoreProps) => {
     const ensureCart = async () => {
       const cartId = await getCart()
       const region = await getRegion()
-      console.log('after cartid and region', cartId, region)
 
       if (cartId) {
         const cartRes = await medusaClient.carts

@@ -15,7 +15,7 @@ export function Medusa({ children }: { children: React.ReactNode }) {
       baseUrl={MEDUSA_BACKEND_URL}
       queryClientProviderProps={{
         client: queryClient,
-        contextSharing: true,
+        // contextSharing: true,
       }}
     >
       {Platform.OS === 'web' && <ReactQueryDevtools />}
