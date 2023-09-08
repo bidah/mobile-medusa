@@ -4,6 +4,7 @@ import useToggleState from 'lib/hooks/use-toggle-state'
 import { useRegions } from 'medusa-react'
 import { Fragment, useEffect, useMemo, useState } from 'react'
 import { ActionSheetIOS } from 'react-native'
+import ChevronDown from 'modules/common/icons/chevron-down'
 import clsx from 'clsx'
 // import { ChevronDown } from 'react-native-heroicons/solid'
 
@@ -43,39 +44,16 @@ const CountrySelect = () => {
     close()
   }
 
-  // countryCode
-  //   ? options?.find((o) => o.country === countryCode)
-  //   : undefined
-
-  // {options?.map((o, index) => {
-  //   return (
-  //     <Listbox.Option
-  //       key={index}
-  //       value={o}
-  //       className="py-2 hover:bg-gray-200 px-3 cursor-pointer flex items-center gap-x-2"
-  //     >
-  //       <ReactCountryFlag
-  //         svg
-  //         style={{
-  //           width: "16px",
-  //           height: "16px",
-  //         }}
-  //         countryCode={o.country}
-  //       />{" "}
-  //       {o.label}
-  //     </Listbox.Option>
-  //   )
-  // })}
-  // onChange={handleChange}
   const onPress = () =>
     ActionSheetIOS.showActionSheetWithOptions(
       {
-        options: options.map((opt) => opt.label),
+        options: ['Cancel', ...options.map((opt) => opt.label)],
         cancelButtonIndex: 0,
         userInterfaceStyle: 'light',
       },
       (buttonIndex) => {
-        handleChange(options[buttonIndex])
+        if (!buttonIndex) return
+        handleChange(options[buttonIndex - 1])
       },
     )
 
@@ -86,12 +64,12 @@ const CountrySelect = () => {
         'relative w-full appearance-none border border-gray-200 bg-transparent px-4 py-3 pt-5 focus:outline-none focus:ring-0',
       )}
     >
-      <Text className={'absolute left-4 top-1 text-xs text-gray-500'}>
+      <Text className={'absolute left-4 top-1 text-[11px] text-gray-500'}>
         {'Country'}
       </Text>
-      <Text className={'absolute right-4 top-[6px] text-lg text-gray-500'}>
-        {'⌄'}
-      </Text>
+      <View className={'absolute right-4 top-[17px] text-lg text-gray-500'}>
+        <ChevronDown className="-rotate-90 transform" />
+      </View>
       <Text>{current?.label ?? ''} </Text>
     </Pressable>
   )

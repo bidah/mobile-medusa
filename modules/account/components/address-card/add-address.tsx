@@ -35,12 +35,6 @@ type FormValues = {
   company?: string
 }
 
-// const CountrySelect = () => {
-//   const { countryCode, setRegion } = useStore()
-//
-//   return <Text>choose country: {countryCode}</Text>
-// }
-
 const AddAddressNative: React.FC = () => {
   const { state, open, close } = useToggleState(false)
   const [submitting, setSubmitting] = useState(false)
