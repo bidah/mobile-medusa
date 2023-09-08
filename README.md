@@ -62,16 +62,6 @@ Features include:
 
 # Quickstart
 
-## Deploy
-
-### Builds with Expo EAS builds
-
-To get started, click the "Deploy with Vercel" button below.
-
-EAS Build allows you to build a ready-to-submit binary of your app for the Google Play Store or Apple App Store.
-
-<https://docs.expo.dev/build/setup/>
-
 ### Install dependencies
 
 Use Yarn to install all dependencies.
@@ -87,6 +77,12 @@ You are now ready to start up your project.
 ```shell
 yarn start
 ```
+
+### Builds with Expo EAS builds
+
+EAS Build allows you to build a ready-to-submit binary of your app for the Google Play Store or Apple App Store.
+
+<https://docs.expo.dev/build/setup/>
 
 # Universal Medusa
 
