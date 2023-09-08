@@ -43,6 +43,8 @@ const AddAddressNative: React.FC = () => {
   const { refetchCustomer } = useAccount()
   const methods = useForm<FormValues>()
   const {
+    setValue,
+    control,
     register,
     handleSubmit,
     formState: { errors },
@@ -85,7 +87,7 @@ const AddAddressNative: React.FC = () => {
       address_1: data.address_1,
       address_2: data.address_2 || '',
       city: data.city,
-      country_code: data.country_code,
+      country_code: data.country_code || 'it',
       province: data.province || '',
       postal_code: data.postal_code,
       phone: data.phone || '',
@@ -195,7 +197,9 @@ const AddAddressNative: React.FC = () => {
               />
 
               <CountrySelect
-                {...register('country_code', { required: true })}
+                setValue={setValue}
+                control={control}
+                // {...register('country_code', { required: true })}
               />
               <Input label="Phone" {...register('phone')} errors={errors} />
             </Stack>

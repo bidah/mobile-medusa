@@ -6,7 +6,7 @@ import { Fragment, useEffect, useMemo, useState } from 'react'
 import { ActionSheetIOS } from 'react-native'
 import ChevronDown from 'modules/common/icons/chevron-down'
 import clsx from 'clsx'
-// import { ChevronDown } from 'react-native-heroicons/solid'
+import { Controller, useForm } from 'react-hook-form'
 
 type CountryOption = {
   country: string
@@ -14,7 +14,7 @@ type CountryOption = {
   label: string
 }
 
-const CountrySelect = () => {
+const CountrySelect = ({ control, setValue }) => {
   const { countryCode, setRegion } = useStore()
   const { regions } = useRegions()
   const [current, setCurrent] = useState<CountryOption | undefined>(undefined)
@@ -44,7 +44,7 @@ const CountrySelect = () => {
     close()
   }
 
-  const onPress = () =>
+  const onPress = (setValue) =>
     ActionSheetIOS.showActionSheetWithOptions(
       {
         options: ['Cancel', ...options.map((opt) => opt.label)],
@@ -53,25 +53,36 @@ const CountrySelect = () => {
       },
       (buttonIndex) => {
         if (!buttonIndex) return
+        setValue('country_code', options[buttonIndex - 1].country)
         handleChange(options[buttonIndex - 1])
       },
     )
 
   return (
-    <Pressable
-      onPress={onPress}
-      className={clsx(
-        'relative w-full appearance-none border border-gray-200 bg-transparent px-4 py-3 pt-5 focus:outline-none focus:ring-0',
-      )}
-    >
-      <Text className={'absolute left-4 top-1 text-[11px] text-gray-500'}>
-        {'Country'}
-      </Text>
-      <View className={'absolute right-4 top-[17px] text-lg text-gray-500'}>
-        <ChevronDown className="-rotate-90 transform" />
-      </View>
-      <Text>{current?.label ?? ''} </Text>
-    </Pressable>
+    <Controller
+      control={control}
+      name={'country_code'}
+      render={({ field: { onChange, value } }) => {
+        return (
+          <Pressable
+            onPress={() => onPress(setValue)}
+            className={clsx(
+              'relative w-full appearance-none border border-gray-200 bg-transparent px-4 py-3 pt-5 focus:outline-none focus:ring-0',
+            )}
+          >
+            <Text className={'absolute left-4 top-1 text-[11px] text-gray-500'}>
+              {'Country'}
+            </Text>
+            <View
+              className={'absolute right-4 top-[17px] text-lg text-gray-500'}
+            >
+              <ChevronDown className="-rotate-90 transform" />
+            </View>
+            <Text>{current?.label ?? ''} </Text>
+          </Pressable>
+        )
+      }}
+    />
   )
 }
 
