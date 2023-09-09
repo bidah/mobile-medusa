@@ -89,7 +89,7 @@ EAS Build allows you to build a ready-to-submit binary of your app for the Googl
 
 # Universal Medusa
 
-If you want to kickstart a medusa project with web and mobile in a integrated setup for cross platform development come visit us at [Universal Medusa Docs](http://dub.sh/universalmedusa)
+If you want to kickstart a Medusa project with web and mobile in a integrated setup for cross platform development come visit us at [Universal Medusa Docs](http://dub.sh/universalmedusa)
 
 # Screens
 
