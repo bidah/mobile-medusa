@@ -8,23 +8,27 @@ import { breakPointsAsArray } from 'design/tailwind/theme'
 import { MobileMenuProvider } from 'lib/context/mobile-menu-context'
 import { BottomSheetProvider } from './bottom-sheet'
 import { AccountProvider } from '../lib/context/account-context'
+import { Toasts } from '@backpackapp-io/react-native-toast'
 
 export function Provider({ children }: { children: React.ReactNode }) {
   return (
-    <SafeArea>
-      <Medusa>
-        <StacksProvider spacing={5} breakpoints={breakPointsAsArray}>
-          <CartDropdownProvider>
-            <Cart>
-              <BottomSheetProvider>
-                <StoreProvider>
-                  <AccountProvider>{children}</AccountProvider>
-                </StoreProvider>
-              </BottomSheetProvider>
-            </Cart>
-          </CartDropdownProvider>
-        </StacksProvider>
-      </Medusa>
-    </SafeArea>
+    <>
+      <SafeArea>
+        <Medusa>
+          <StacksProvider spacing={5} breakpoints={breakPointsAsArray}>
+            <CartDropdownProvider>
+              <Cart>
+                <BottomSheetProvider>
+                  <StoreProvider>
+                    <AccountProvider>{children}</AccountProvider>
+                  </StoreProvider>
+                </BottomSheetProvider>
+              </Cart>
+            </CartDropdownProvider>
+          </StacksProvider>
+        </Medusa>
+        <Toasts extraInsets={{ top: 40 }} />
+      </SafeArea>
+    </>
   )
 }

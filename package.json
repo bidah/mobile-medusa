@@ -11,6 +11,7 @@
   "license": "MIT",
   "dependencies": {
     "@babel/plugin-proposal-export-namespace-from": "^7.18.9",
+    "@backpackapp-io/react-native-toast": "^0.10.0",
     "@gorhom/bottom-sheet": "^4.4.7",
     "@headlessui/react": "^1.7.17",
     "@hookform/error-message": "^2.0.1",

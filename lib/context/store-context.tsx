@@ -1,4 +1,3 @@
-import { medusaClient } from 'lib/config'
 import { handleError } from 'lib/util/handle-error'
 import { Region } from '@medusajs/medusa'
 import {
@@ -10,7 +9,8 @@ import {
 import React, { useEffect, useState } from 'react'
 import { useCartDropdown } from './cart-dropdown-context'
 import AsyncStorage from '@react-native-async-storage/async-storage'
-import { Platform } from 'react-native'
+import { Dimensions, Platform } from 'react-native'
+import { ToastPosition, toast } from '@backpackapp-io/react-native-toast'
 
 interface VariantInfoProps {
   variantId: string
@@ -251,8 +251,10 @@ export const StoreProvider = ({ children }: StoreProps) => {
           setCart(cart)
           await storeCart(cart.id)
           timedOpen()
+          toast.success('Item added to cart')
         },
         onError: (error) => {
+          toast.error('Error while adding item to cart')
           handleError(error)
         },
       },
