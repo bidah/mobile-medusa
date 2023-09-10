@@ -1,5 +1,11 @@
 import { LoginScreen } from '@/modules/account/login-screen'
+import { Stack } from 'expo-router'
 
 export default function LoginPage() {
-  return <LoginScreen />
+  return (
+    <>
+      <Stack.Screen options={{ headerBackVisible: false }} />
+      <LoginScreen />
+    </>
+  )
 }
