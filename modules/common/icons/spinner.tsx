@@ -53,14 +53,14 @@ const styles = StyleSheet.create({
     height: '100%',
   },
   spinner: {
-    height: 40,
-    width: 40,
-    borderRadius: 30,
-    borderWidth: 6,
-    borderTopColor: 'lightgray',
-    borderRightColor: 'lightgray',
-    borderBottomColor: 'lightgray',
-    borderLeftColor: 'black',
+    height: 20,
+    width: 20,
+    borderRadius: 40,
+    borderWidth: 4,
+    borderTopColor: 'gray',
+    borderRightColor: 'gray',
+    borderBottomColor: 'gray',
+    borderLeftColor: 'lightgray',
   },
 })
 

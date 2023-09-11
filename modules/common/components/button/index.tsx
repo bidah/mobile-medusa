@@ -20,7 +20,7 @@ const Button = ({
   isLoading = false,
   variant = 'primary',
   onPress,
-    disabled = false,
+  disabled = false,
 }: ButtonProps) => {
   return (
     <Pressable onPress={onPress}>
@@ -33,7 +33,7 @@ const Button = ({
             'border-gray-920 bg-transparent text-gray-900 hover:bg-gray-100':
               variant === 'secondary',
           },
-          style
+          style,
         )}
       >
         {isLoading ? (
