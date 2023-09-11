@@ -21,6 +21,10 @@ Combine Medusa's modules for your commerce backend with the latest Expo features
 <img src="https://github.com/bidah/mobile-medusa/assets/1574028/a466f8f6-7009-42c9-9a68-2e3ea170d9f9" width="100%" />
 </p>
 
+> [!IMPORTANT]
+
+> This is an alpha version not ready for production yet. It's missing mainly the production payment provider configuration that will be available on the beta version. To stay up to date follow [Bidah](https://twitter.com/intent/follow?screen_name=bidah) on X / Twitter for latests updates.
+
 ### Prerequisites
 
 To use the starter you should have:
