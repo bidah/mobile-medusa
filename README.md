@@ -22,7 +22,6 @@ Combine Medusa's modules for your commerce backend with the latest Expo features
 </p>
 
 > [!IMPORTANT]
-
 > This is an alpha version not ready for production yet. It's missing mainly the production payment provider configuration that will be available on the beta version. To stay up to date follow [Bidah](https://twitter.com/intent/follow?screen_name=bidah) on X / Twitter for latests updates.
 
 ### Prerequisites
