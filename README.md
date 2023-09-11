@@ -40,12 +40,13 @@ To use the starter you should have:
 
 The Mobile Medusa Next.js Starter is built with:
 
+- [Medusa](https://medusajs.com/)
 - [Expo](https://expo.dev/)
 - [Expo-router](https://docs.expo.dev/routing/introduction/)
 - [Nativewind](https://nativewind.dev)
 - [Gorhom/react-native-bottom-sheet](https://gorhom.github.io/react-native-bottom-sheet/)
+- [Stacks Layouts](https://mobily.github.io/stacks/)
 - [Typescript](https://www.typescriptlang.org/)
-- [Medusa](https://medusajs.com/)
 
 Features include:
 
