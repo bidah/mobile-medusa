@@ -69,6 +69,17 @@ Features include:
 
 # Quickstart
 
+### Medusa Backend configuration
+
+> [!NOTE]
+> You need to have a Medusa Backend to be linked to mobile storefront
+
+Set your `MEDUSA_BACKEND_URL` var present in `/lib/config.ts`
+
+```js
+let MEDUSA_BACKEND_URL = 'http://localhost:9000'
+```
+
 ### Install dependencies
 
 Use Yarn to install all dependencies.
