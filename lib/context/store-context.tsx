@@ -1,5 +1,6 @@
 import { handleError } from 'lib/util/handle-error'
 import { Region } from '@medusajs/medusa'
+import { medusaClient } from 'lib/config'
 import {
   useCart,
   useCreateLineItem,
