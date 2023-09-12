@@ -102,9 +102,13 @@ EAS Build allows you to build a ready-to-submit binary of your app for the Googl
 
 <https://docs.expo.dev/build/setup/>
 
-# Universal Medusa
+# [Universal Medusa](http://dub.sh/universalmedusa)
 
-If you want to kickstart a Medusa project with web and mobile in a integrated setup for cross platform development come visit us at [Universal Medusa Docs](http://dub.sh/universalmedusa)
+If you want to kickstart a Medusa project with web (Next.js) and mobile (Expo) in a integrated setup for cross platform development come visit us at [Universal Medusa Docs](http://dub.sh/universalmedusa)
+
+# [Next.js Starter Medusa](https://github.com/medusajs/nextjs-starter-medusa)
+
+A performant e-commerce starter template with Next.js 13 and Medusa.
 
 # Screens
 
