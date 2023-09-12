@@ -29,7 +29,6 @@ const ProductActions: React.FC<ProductActionsProps> = ({ product }) => {
     return variantPrice || cheapestPrice || null
   }, [price])
 
-  console.log('options', options)
   return (
     <View className="flex flex-col gap-y-2">
       {product.collection && (
