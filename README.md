@@ -18,7 +18,7 @@ Combine Medusa's modules for your commerce backend with the latest Expo features
 </p>
 
 <p style="text-align:center; display: block;">
-<img src="https://github.com/bidah/mobile-medusa/assets/1574028/a466f8f6-7009-42c9-9a68-2e3ea170d9f9" width="100%" />
+<img src="https://i.imgur.com/wDiJG6b.png" width="100%" />
 </p>
 
 > [!IMPORTANT]
