@@ -38,7 +38,6 @@ const Register = () => {
   } = methods
 
   const onSubmit = handleSubmit(async (credentials) => {
-    console.log('credentials', credentials)
     medusaClient.customers
       .create(credentials)
       .then(() => {

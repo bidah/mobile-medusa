@@ -1,58 +1,57 @@
-import { Listbox, Transition } from "@headlessui/react";
-import { useCheckout } from "lib/context/checkout-context";
-import { Address } from "@medusajs/medusa";
-import Radio from "modules/common/components/radio";
-import ChevronDown from "modules/common/icons/chevron-down";
-import clsx from "clsx";
-import { isEqual, omit } from "lodash";
-import { Fragment, useMemo, useState } from "react";
-import { useWatch } from "react-hook-form";
+import { Listbox, Transition } from '@headlessui/react'
+import { useCheckout } from 'lib/context/checkout-context'
+import { Address } from '@medusajs/medusa'
+import Radio from 'modules/common/components/radio'
+import ChevronDown from 'modules/common/icons/chevron-down'
+import clsx from 'clsx'
+import { isEqual, omit } from 'lodash'
+import { Fragment, useMemo, useState } from 'react'
+import { useWatch } from 'react-hook-form'
 
 type AddressSelectProps = {
-  addresses: Address[];
-};
+  addresses: Address[]
+}
 
 const AddressSelect = ({ addresses }: AddressSelectProps) => {
-  const [selected, setSelected] = useState<string | undefined>(undefined);
+  const [selected, setSelected] = useState<string | undefined>(undefined)
 
-  const { control, setSavedAddress } = useCheckout();
+  const { control, setSavedAddress } = useCheckout()
 
   const handleSelect = (id: string) => {
-    const savedAddress = addresses.find((a) => a.id === id);
+    const savedAddress = addresses.find((a) => a.id === id)
 
     if (savedAddress) {
-      setSavedAddress(savedAddress);
+      setSavedAddress(savedAddress)
     }
 
-    setSelected(id);
-  };
+    setSelected(id)
+  }
 
   const currentShippingAddress = useWatch({
     control,
-    name: "shipping_address",
-  });
+    name: 'shipping_address',
+  })
 
   const selectedAddress = useMemo(() => {
     for (const address of addresses) {
       const checkEquality = isEqual(
         omit(address, [
-          "id",
-          "created_at",
-          "updated_at",
-          "country",
-          "deleted_at",
-          "metadata",
-          "customer_id",
+          'id',
+          'created_at',
+          'updated_at',
+          'country',
+          'deleted_at',
+          'metadata',
+          'customer_id',
           // 'country_code',
-        ])
+        ]),
         // omit(currentShippingAddress, ['country_code'])
-      );
+      )
       if (checkEquality) {
-        console.log(address);
-        return address;
+        return address
       }
     }
-  }, [currentShippingAddress, addresses]);
+  }, [currentShippingAddress, addresses])
 
   return (
     <Listbox onChange={handleSelect} value={selected}>
@@ -63,11 +62,11 @@ const AddressSelect = ({ addresses }: AddressSelectProps) => {
               <span className="block truncate">
                 {selectedAddress
                   ? selectedAddress.address_1
-                  : "Choose an address"}
+                  : 'Choose an address'}
               </span>
               <ChevronDown
                 size={16}
-                className={clsx({ "rotate-180 transform": open })}
+                className={clsx({ 'rotate-180 transform': open })}
               />
             </>
           )}
@@ -115,13 +114,13 @@ const AddressSelect = ({ addresses }: AddressSelectProps) => {
                     </div>
                   </div>
                 </Listbox.Option>
-              );
+              )
             })}
           </Listbox.Options>
         </Transition>
       </div>
     </Listbox>
-  );
-};
+  )
+}
 
-export default AddressSelect;
+export default AddressSelect
