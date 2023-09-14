@@ -74,12 +74,9 @@ const AddAddressNative: React.FC = () => {
   }
 
   const submit = handleSubmit(async (data: FormValues) => {
-    console.log('on handleSubmit')
-
     setSubmitting(true)
     setError(undefined)
 
-    console.log('before payload')
     const payload = {
       first_name: data.first_name,
       last_name: data.last_name,
@@ -93,8 +90,6 @@ const AddAddressNative: React.FC = () => {
       phone: data.phone || '',
       metadata: {},
     }
-
-    console.log(payload)
 
     medusaClient.customers.addresses
       .addAddress({ address: payload })
