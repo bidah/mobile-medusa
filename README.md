@@ -38,7 +38,7 @@ To use the starter you should have:
 
 # Overview
 
-The Mobile Medusa Next.js Starter is built with:
+The Mobile Medusa starter is built with:
 
 - [Medusa](https://medusajs.com/)
 - [Expo](https://expo.dev/)
